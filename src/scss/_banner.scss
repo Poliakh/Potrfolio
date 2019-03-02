@@ -1,0 +1,79 @@
+.banner{
+	color:$collight;
+	margin: 0 auto;
+	transition: 0.5s  ease;
+	transition-property: 
+		padding-top,
+		padding-bottom,
+		white-space,
+		font-size;
+	
+	&__head{
+		margin: 0 auto;
+		padding-top: 189px;
+		padding-bottom: 202px;
+		transition: inherit;
+	}
+}
+
+.greet, .myname, .profession{
+	text-align: center;
+	font-size: 18px;
+	font-weight: 400;
+	text-transform: uppercase;
+	transition: inherit;
+
+}
+.greet{
+
+}
+.myname{
+	font-size: 80px;
+	font-weight: bold;
+	margin-top: 24px;
+	margin-bottom: 0;
+}
+.profession{
+	margin-top: 23px;
+}
+@media screen and (max-width:$dee_s){
+		.banner{
+		margin: 0 auto;
+		&__head{
+			padding-top: 80px;
+			padding-bottom: 90px;
+		}
+	}
+	.greet, .myname, .profession{
+		font-size: 16px;
+	}
+	.myname{
+		font-size: 38px;
+		margin-top: 15px;
+	}
+	
+}
+@media screen and (max-width:$dee_m){
+	.banner{
+		margin: 0 auto;
+		&__head{
+			padding-top: 110px;
+			padding-bottom: 120px;
+		}
+	}
+	.myname{
+		font-size: 60px;
+		margin-top: 15px;
+	}
+	
+
+}
+// @media screen and (min-width:$dee_m){
+
+// }
+// @media screen and (min-width:$dee_l){
+
+// }
+// @media screen and (min-width:$dee_xl){
+
+// }

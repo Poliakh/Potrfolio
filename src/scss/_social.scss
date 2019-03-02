@@ -1,0 +1,40 @@
+.social{
+	padding: 50px 0;
+	background-color: #f2f2f2;
+	transition: 0.5s all ease-in-out;
+
+	&__icon{
+		margin: 0 auto;
+		width: 70%;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		transition: 0.15s all ease;
+
+	}
+
+}
+// @media screen and (min-width:$dee_xs){
+// 	.social{
+// 		padding: 5px 0;
+// 	}
+// 	.social .my{
+// 		font-size: 40px;
+// 		padding: 10px;
+
+// 	}
+// }
+// @media screen and (max-width:$dee_m){
+// 	.social{
+// 		padding: 20px 0;
+// 		// transition: all inherit;
+// 		&__icon{
+// 			width: 80%;
+// 			// transition: inherit;
+// 		}
+// 		& .container{
+// 			min-width: 100%;
+// 			// transition: inherit;
+// 		}
+// 	}
+// }

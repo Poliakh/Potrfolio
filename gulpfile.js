@@ -41,6 +41,7 @@ let gulp			= require ('gulp'),
 		},
 		watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
 			html:	'src/**/*.html',
+			block:	'src/blocks',
 			js:		'src/script/**/*.js',
 			scss:	'src/scss/**/*.scss',
 			css:	'src/css/**/*.css',
@@ -101,6 +102,8 @@ gulp.task('htmlmin', ()=>{
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(gulpImport(path.src.block))
+		.pipe(gulpImport(path.src.block))
+		.pipe(gulpImport(path.src.block + 'other/'))
 		.pipe(gulpif(argv.prod,
 			htmlMin({collapseWhitespace: true,removeComments: true})))
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
@@ -167,14 +170,14 @@ gulp.task('server',()=>{
 	})
 });
 
-gulp.task('img', ()=>{
+gulp.task('img', () => {
 	gulp.src(path.src.img) // Берем все изображения из src
-		.pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
-			interlaced: true,
-			progressive: true,
-			svgoPlugins: [{removeViewBox: false}],
-			use: [pngquant()]
-		})))
+		// .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
+		// 	interlaced: true,
+		// 	progressive: true,
+		// 	svgoPlugins: [{removeViewBox: false}],
+		// 	use: [pngquant()]
+		// })))
 		.pipe(gulp.dest(path.build.img)) // Выгружаем на продакшен
 		.pipe(browserSync.reload({stream:true}));
 });
