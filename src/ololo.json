@@ -1,0 +1,22 @@
+{
+	"duhoot": {
+				"gitpage":"https://poliakh.github.io/myportfolio/makets/duhoot/index.html",
+				"github":"https://github.com/Poliakh/Maket-duhoot.git",
+				"preview":"preview/guhoot.jpg",
+				"difficulty":"8"
+			},
+	"surfase": {
+				"gitpage":"#",
+				"preview":"preview/surfase.jpg",
+				"difficulty":"7"
+
+			},
+	"upbusines": {
+				"gitpage":"#",
+				"preview":"preview/upbusines.jpg",
+				"difficulty":"5"
+
+			}
+			
+	
+}
