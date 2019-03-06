@@ -9,10 +9,24 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		transition: 0.15s all ease;
+		transition: 0.8s all ease;
+
 
 	}
 
+}
+.my{
+	&:hover{
+		color: $logo;
+		text-shadow:0 0 1px rgba(0, 0, 0, 0.8);
+		transition: 0.1s ease-in-out;
+		cursor: pointer;
+		transform: scale(1.05) ;
+	}
+	&:active{
+		text-shadow:0 0 5px rgb(110, 59, 0);
+
+	}
 }
 // @media screen and (min-width:$dee_xs){
 // 	.social{

@@ -6,6 +6,7 @@ let gulp			= require ('gulp'),
 	htmlMin			= require('gulp-htmlmin'),
 	browserSync		= require('browser-sync'),		//виртуальный браузер
 	concat			= require('gulp-concat'),
+	// uglify			= require('gulp-uglify/composer'),		//сжатие JS
 	uglify			= require('gulp-uglifyjs'),		//сжатие JS
 	babel			= require('gulp-babel'),		//траншпилим JS
 	cssnano			= require('gulp-cssnano'),
@@ -18,7 +19,8 @@ let gulp			= require ('gulp'),
 	argv 			= require('yargs').argv,
 
 	imagemin		= require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
-    pngquant		= require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
+	pngquant		= require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
+	imageminWebp = require('imagemin-webp'),
 	cache			= require('gulp-cache'), // Подключаем библиотеку кеширования
 	util			= require('gulp-util');
 	
@@ -31,6 +33,7 @@ let gulp			= require ('gulp'),
 			fonts:	'build/fonts/'
 		},
 		src: { //Пути откуда брать исходники
+			src:'src/',
 			block:'src/blocks/',
 			html:	'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
 			js:		'src/script/**/*.js',//В стилях и скриптах нам понадобятся только main файлы
@@ -49,7 +52,7 @@ let gulp			= require ('gulp'),
 			fonts:	'src/fonts/**/*.*'
 		},
 		dir: 'build',
-		produc:'production/',
+		produc:'../poliakh.github.io/myportfolio',
 		test : 'test'
 	};
 
@@ -76,9 +79,10 @@ gulp.task('default',['build','server'], ()=>{
 	gulp.watch(path.watch.js, ['script']);
 	gulp.watch(path.watch.img, ['img']);
 });
-// для запуска версии prodaction
+//-------------- для запуска версии prodaction-----------------
 //	gulp build --prod  - создает версию с компрессией
 //	gulp prod - переносит в папку  prodaction
+//---------------------end-----------------------------------
 gulp.task('ex',['build','prod'], ()=>{
 	// gulp.start('prod')
 	// gulp.src(path.dir)
@@ -93,6 +97,10 @@ gulp.task('prod',['cleanProd'],()=>{
 gulp.task('build',['clean','htmlmin','sass','script','img'], ()=>{
 	gulp.src(path.src.fonts)
 		.pipe(gulp.dest(path.build.fonts));
+	gulp.src(path.src.src + '/*.json')
+		.pipe(gulp.dest(path.build.html));
+	gulp.src(path.src.src + '/preview')
+		.pipe(gulp.dest(path.build.html));
 });
 
 
@@ -152,10 +160,10 @@ gulp.task('script', ()=>{
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(concat('script.js'))
-		.pipe(babel({
-			presets: ['@babel/env']
-		}))
-		.pipe(gulpif(argv.prod, uglify()))//минимазция js
+		// .pipe(babel({
+		// 	presets: ['@babel/env']
+		// }))
+		// .pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
 		// .pipe(browserSync.reload({stream:true})); //незачем
@@ -170,24 +178,58 @@ gulp.task('server',()=>{
 	})
 });
 
-gulp.task('img', () => {
-	gulp.src(path.src.img) // Берем все изображения из src
-		// .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
-		// 	interlaced: true,
-		// 	progressive: true,
-		// 	svgoPlugins: [{removeViewBox: false}],
-		// 	use: [pngquant()]
-		// })))
-		.pipe(gulp.dest(path.build.img)) // Выгружаем на продакшен
+gulp.task('img', ()=>{
+	gulp.src(path.src.img)
+		.pipe(cache(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: true},
+					{cleanupIDs: false}
+				]
+			})
+		])))
+		.pipe(gulp.dest(path.build.img))
+		.pipe(browserSync.reload({stream:true}));
+
+	gulp.src("src/preview/*.*")
+		.pipe(cache(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: true},
+					{cleanupIDs: false}
+				]
+			})
+		])))
+		.pipe(gulp.dest("build/preview/"))
 		.pipe(browserSync.reload({stream:true}));
 });
+
+
+	// .pipe(gulp.dest(path.build.img)) // Выгружаем на продакшен
+	// .pipe(browserSync.reload({stream:true}));
+
+
+
 
 //удаление папки дистрибутива
 gulp.task('clean', ()=>{
 	del.sync(path.dir);
 });
 gulp.task('cleanProd', ()=>{
-	del.sync(path.produc);
+	del.sync(
+			["../poliakh.github.io/myportfolio/css",
+			"../poliakh.github.io/myportfolio/fonts",
+			"../poliakh.github.io/myportfolio/img",
+			"../poliakh.github.io/myportfolio/preview",
+			"../poliakh.github.io/myportfolio/script",
+			"../poliakh.github.io/myportfolio/index.html"],
+	{'force':true});
 });
 
 //чистка кеша в случае проблемс картинками например.
