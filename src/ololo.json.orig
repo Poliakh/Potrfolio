@@ -1,0 +1,48 @@
+{
+	"duhoot": {
+<<<<<<< HEAD
+				"gitpage":"https://poliakh.github.io/myportfolio/makets/duhoot",
+				"github":"https://github.com/Poliakh/Maket-duhoot.git",
+				"preview":"preview/duhoot.jpg",
+				"difficulty":"7"
+			},
+	"surfase": {
+				"gitpage":"https://poliakh.github.io/myportfolio/makets/surface",
+				"github":"https://github.com/Poliakh/Maket-surface.git",
+				"preview":"preview/surfase.jpg",
+				"difficulty":"6"
+			},
+	"upbusiness": {
+				"gitpage":"https://poliakh.github.io/myportfolio/makets/upbusiness",
+				"github":"https://github.com/Poliakh/03-Maket.git",
+				"preview":"preview/upbusiness.jpg",
+				"difficulty":"5"
+			},
+	"biseline": {		
+				"gitpage":"https://poliakh.github.io/myportfolio/makets/bislite",
+				"github":"https://github.com/Poliakh/maket-02.git",
+				"preview":"preview/biseline.jpg",
+				"difficulty":"3"
+			}
+=======
+				"gitpage":"https://poliakh.github.io/myportfolio/makets/duhoot/index.html",
+				"github":"https://github.com/Poliakh/Maket-duhoot.git",
+				"preview":"preview/guhoot.jpg",
+				"difficulty":"8"
+			},
+	"surfase": {
+				"gitpage":"#",
+				"preview":"preview/surfase.jpg",
+				"difficulty":"7"
+
+			},
+	"upbusines": {
+				"gitpage":"#",
+				"preview":"preview/upbusines.jpg",
+				"difficulty":"5"
+
+			}
+			
+	
+>>>>>>> 7781f3794b92940b208b7ca3cf7b40b2888d0a68
+}

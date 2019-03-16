@@ -12,11 +12,14 @@
 				</div>
 			
 			@import "card.html"
+<<<<<<< HEAD
+=======
 			<!-- @import "card.html"
 			@import "card.html"
 			@import "card.html"
 			@import "card.html"
 			@import "card.html" -->
+>>>>>>> 7781f3794b92940b208b7ca3cf7b40b2888d0a68
 		</div>
 	</div>
 

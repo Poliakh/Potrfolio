@@ -160,10 +160,10 @@ gulp.task('script', ()=>{
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		.pipe(concat('script.js'))
-		.pipe(babel({
-			presets: ['@babel/env']
-		}))
-		.pipe(gulpif(argv.prod, uglify()))//минимазция js
+		// .pipe(babel({
+		// 	presets: ['@babel/env']
+		// }))
+		// .pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
 		// .pipe(browserSync.reload({stream:true})); //незачем
@@ -178,15 +178,15 @@ gulp.task('server',()=>{
 	})
 });
 
-gulp.task('img', () => {
-	gulp.src(path.src.img) // Берем все изображения из src
-		// .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
-		// 	interlaced: true,
-		// 	progressive: true,
-		// 	svgoPlugins: [{removeViewBox: false}],
-		// 	use: [pngquant()]
-		// })))
-		.pipe(gulp.dest(path.build.img)) // Выгружаем на продакшен
+gulp.task('img', ()=>{
+	gulp.src(path.src.img)
+		.pipe(cache(imagemin([
+			imagemin.gifsicle({interlaced: true}),
+			imagemin.jpegtran({progressive: true}),
+			imagemin.optipng({optimizationLevel: 5}),
+			imagemin.svgo({
+				plugins: [
+					{removeViewBox: true},
 					{cleanupIDs: false}
 				]
 			})
@@ -223,12 +223,21 @@ gulp.task('clean', ()=>{
 });
 gulp.task('cleanProd', ()=>{
 	del.sync(
+<<<<<<< HEAD
 			["../poliakh.github.io/myportfolio/css",
 			"../poliakh.github.io/myportfolio/fonts",
 			"../poliakh.github.io/myportfolio/img",
 			"../poliakh.github.io/myportfolio/preview",
 			"../poliakh.github.io/myportfolio/script",
 			"../poliakh.github.io/myportfolio/index.html"],
+=======
+			["../poliakh.github.io/myportfolio/css"],
+			["../poliakh.github.io/myportfolio/fonts"],
+			["../poliakh.github.io/myportfolio/img"],
+			["../poliakh.github.io/myportfolio/preview"],
+			["../poliakh.github.io/myportfolio/script"],
+			["../poliakh.github.io/myportfolio/index.html"],
+>>>>>>> 7781f3794b92940b208b7ca3cf7b40b2888d0a68
 	{'force':true});
 });
 
