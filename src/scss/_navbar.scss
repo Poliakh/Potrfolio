@@ -3,93 +3,56 @@
 	background-color: rgba(0, 0, 0, 0.5);
 	font-size: 16px;
 	position: fixed;
-	padding-top: 5px;
-	padding-bottom: 5px;
-	display: flex;
-	align-items: center;
-	min-height: 50px;
+	padding: 5px 0;
 	z-index:10;
 }
-
+.burger{
+	visibility: hidden;
+}
 .navbar{
 	width: 100%;
-	min-height: 100%;
-	display: flex;
-	justify-content: flex-end;
-	align-items: center;
+	line-height: 50px;
 	position: relative;
-	&__nav{
-		width: 100%;
-	}
-	&__burger{
-	}
+	width: 100%;
+	display: flex;
+	justify-content: center
 }
-
-.logo{
-	font-size: 18px;
-	font-family: 'Montserrat';
-	font-weight: bold;
+.menu{
+	display: flex;
 	text-transform: uppercase;
-	color: $logo;
-	// line-height: 50px;
-	margin-right: auto;
-	margin-left: 5px;
-	transition: 0.8s ease-out;
-	&:hover{
-		text-shadow:0 0 8px rgba(0, 0, 0, 0.9);
-		transition: 0.15s ease-in-out;
-		color: $logo * 0.9;
-
-	}
 }
 .nav{
-	line-height: 25px;
-	// display: flex;
-	// align-items: center;
-	&__menu{
-		text-transform: capitalize;
-		display: flex;
-		justify-content: flex-end;
-	}
 	&__link{
 		color: $collight;
-		padding: 10px 15px;
-		// line-height: 20px;
-		transition: 0.8s ease-out;
-
+		padding: 10px 16px;
+		transition: 0.8s color ease-out;
 		&:hover{
 			color: $logo;
 			text-shadow:0 0 5px rgba(0, 0, 0, 0.8);
 			transition: 0.15s ease-in-out;
-			// animation-direction: alternate;
 		}
-
 	}
-
 }
+
 @media screen and (max-width:$dee_s){
 	.navbarWrap{
 		min-height: 40px;
 	}
-	.navbar__logo{
-		margin: auto;
+	.navbar{
+		justify-content: left;
+		line-height: 40px;
 	}
-
-	.menu{
+	.nav__menu{
 		flex-direction: column;
 	}
-	.nav{
-		position: absolute;
+	.menu{
+		position: relative;
+		bottom: 300px;
 		background-color: rgba(0, 0, 0, 0.5);
-		overflow: hidden;
-		height: 0;
-		transition: 1s all;
-		left:0px;
-		top:44px;
-		&:hover {
-			height: 166px;
-		}
-		&__item{
+		transition: 1s;
+
+
+		& > li{
 			padding-top: 8px;
 			padding-bottom: 8px;
 			border-bottom: solid 1px rgba(255, 255, 255, 0.144);
@@ -98,6 +61,18 @@
 				border-bottom: none;
 			}
 		}
+
+	}
+	.nav{
+		position: absolute;
+		overflow: hidden;
+		// height: 0;
+		transition: 1s all;
+		left:0px;
+		top:45px;
+		&:hover {
+			min-height:200px;
+		}
 	}
 	.burger{
 		width: 42px;
@@ -105,8 +80,10 @@
 		border-radius: 10%;
 		position: relative;
 		box-sizing: border-box;
-		&:hover ~.nav{
-			height: 166px;
+		visibility: visible;
+		&:hover ~.nav .menu{
+			// height: 110px;
+			bottom:0;
 			transition: 1s;
 		}
 		&:hover{

@@ -6,21 +6,21 @@
 				"difficulty":"7"
 			},
 	"surfase": {
-				"gitpage":"https://poliakh.github.io/myportfolio/makets/surfase",
+				"gitpage":"https://poliakh.github.io/myportfolio/makets/surface",
 				"github":"https://github.com/Poliakh/Maket-surface.git",
 				"preview":"preview/surfase.jpg",
 				"difficulty":"6"
 			},
 	"upbusiness": {
 				"gitpage":"https://poliakh.github.io/myportfolio/makets/upbusiness",
-				"github":"upbusines",
-				"preview":"preview/upbusines.jpg",
+				"github":"https://github.com/Poliakh/03-Maket.git",
+				"preview":"preview/upbusiness.jpg",
 				"difficulty":"5"
 			},
-	"biseline": {
-				"gitpage":"https://poliakh.github.io/myportfolio/makets/biseline",
+	"biseline": {		
+				"gitpage":"https://poliakh.github.io/myportfolio/makets/bislite",
 				"github":"https://github.com/Poliakh/maket-02.git",
-				"preview":"preview/upbusiness.jpg",
+				"preview":"preview/biseline.jpg",
 				"difficulty":"3"
 			}
 }

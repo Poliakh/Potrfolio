@@ -1,0 +1,42 @@
+.contacts{
+	background-color: $bgcFoot;
+	// min-height: 345px;
+}
+.wrapCont{
+	width: 80%;
+	padding: 90px 0;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	&__foto{
+		width: 120px;
+		height: 120px;
+		border-radius: 50%;
+	}
+	&__download{
+		align-self: center;
+	}
+
+}
+.details{
+	width: 300px;
+	&__head{
+		color:#fff;
+
+	}
+	&__cont{
+		color:#727272;
+
+	}
+
+}
+.download{
+	width: 222px;
+	height: 55px;
+	border-radius: 4px;
+	background-color: #444;
+	color:#fff;
+	font-weight: 900;
+	font-size: 16px;
+	border: none;
+}

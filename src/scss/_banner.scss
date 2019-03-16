@@ -8,32 +8,29 @@
 		white-space,
 		font-size;
 	
-	&__head{
-		margin: 0 auto;
-		padding-top: 189px;
-		padding-bottom: 202px;
-		transition: inherit;
 	}
+.headBlock{
+	margin: 0 auto;
+	padding-top: 20%;
+	padding-bottom: 26%;
+	transition: inherit;
 }
 
-.greet, .myname, .profession{
+.upLine, .headline, .downLine{
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: 400;
 	text-transform: uppercase;
 	transition: inherit;
 
 }
-.greet{
-
-}
-.myname{
+.headline{
 	font-size: 80px;
 	font-weight: bold;
 	margin-top: 24px;
 	margin-bottom: 0;
 }
-.profession{
+.downLine{
 	margin-top: 23px;
 }
 @media screen and (max-width:$dee_s){
@@ -44,10 +41,10 @@
 			padding-bottom: 90px;
 		}
 	}
-	.greet, .myname, .profession{
+	.upLine, .headline, .downLine{
 		font-size: 16px;
 	}
-	.myname{
+	.headline{
 		font-size: 38px;
 		margin-top: 15px;
 	}
@@ -61,7 +58,7 @@
 			padding-bottom: 120px;
 		}
 	}
-	.myname{
+	.headline{
 		font-size: 60px;
 		margin-top: 15px;
 	}
