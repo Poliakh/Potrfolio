@@ -63,18 +63,31 @@
 	.portf .container{
 		max-width: 990px;
 	}
+	.cardWrap{
+		justify-content: space-around;
+	}
+
 	.card{
+		/*  по три плитки
 		width: 315px;
-		height: 210px;
+		height: 210px; */
+		width: 410px;
+		height: calc(410px / 1.5);
 	}
 }
 @media screen and (min-width:$dee_xl){
 	.portf .container{
 		max-width: 1170px;
 	}
+	.cardWrap{
+		justify-content: space-around;
+	}
 	.card{
+	/* 	// по три плитки
 		width: 376px;
-		height: 251px;
+		height: 251px; */
+		width: 500px;
+		height: calc(500px / 1.5);
 	}
 
 }

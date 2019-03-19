@@ -179,20 +179,20 @@ gulp.task('server',()=>{
 });
 
 gulp.task('img', () => {
-	gulp.src(path.src.img) // Берем все изображения из src
-		// .pipe(cache(imagemin({  // Сжимаем их с наилучшими настройками с учетом кеширования
-		// 	interlaced: true,
-		// 	progressive: true,
-		// 	svgoPlugins: [{removeViewBox: false}],
-		// 	use: [pngquant()]
-		// })))
-		.pipe(gulp.dest(path.build.img)) // Выгружаем на продакшен
-					{cleanupIDs: false}
-				]
-			})
-		])))
-		.pipe(gulp.dest(path.build.img))
-		.pipe(browserSync.reload({stream:true}));
+	gulp.src(path.src.img)
+	.pipe(cache(imagemin([
+		imagemin.gifsicle({interlaced: true}),
+		imagemin.jpegtran({progressive: true}),
+		imagemin.optipng({optimizationLevel: 5}),
+		imagemin.svgo({
+			plugins: [
+				{removeViewBox: true},
+				{cleanupIDs: false}
+			]
+		})
+	])))
+	.pipe(gulp.dest(path.build.img))
+	.pipe(browserSync.reload({stream:true}));
 
 	gulp.src("src/preview/*.*")
 		.pipe(cache(imagemin([

@@ -1,6 +1,6 @@
 let mylist = document.createDocumentFragment();
 let parentCards = document.querySelector('.cardWrap');
-let elemCard = parentCards.querySelector(".card");
+let elemCard = parentCards.querySelector('.card');
 parentCards.removeChild(elemCard);
 elemCard.hidden = false;
 

@@ -25,13 +25,16 @@
     "gulp-imagemin": "^5.0.3",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.2",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^6.0.1",
-    "node-sass": "^4.11.0"
+    "node-sass": "^4.11.0",
+    "postcss-reporter": "^6.0.1",
+    "stylelint": "^9.10.1"
   },
   "dependencies": {
     "gulp-if": "^2.0.2",

@@ -16,12 +16,24 @@
 .myresume{
 	color: $basic;
 }
-.part{
+.info{
 	width: 700px;
 	margin: 0 auto;
-	margin-top: 15px;
+	margin-top: 20px;
 	margin-bottom: 20px;
 }
-.info{
+.info__head{
+	font-size: 20px;
+	color: inherit;
+}
+.info__text{
 	font-size: 16px;
+	margin-top: 8px;
+	font-style: italic;
+	text-align: justify;
+
+}
+.info__item{
+	list-style:square outside;
+	margin-left: 20px;
 }
