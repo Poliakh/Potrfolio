@@ -19,9 +19,11 @@
 }
 .menu{
 	display: flex;
+	justify-content: space-between;
 	text-transform: uppercase;
 }
 .nav{
+	min-width: 47%;
 	&__link{
 		color: $collight;
 		padding: 10px 16px;
@@ -50,8 +52,6 @@
 		bottom: 300px;
 		background-color: rgba(0, 0, 0, 0.5);
 		transition: 1s;
-
-
 		& > li{
 			padding-top: 8px;
 			padding-bottom: 8px;

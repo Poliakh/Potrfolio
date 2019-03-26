@@ -14,7 +14,7 @@
 	margin: 0 auto;
 	display: flex;
 	justify-content: center;
-	// flex-wrap: wrap;
+	flex-wrap: wrap;
 	&__download{
 		align-self: center;
 	}
@@ -23,7 +23,8 @@
 .details{
 	margin-right: 40px;
 	margin-left: 40px;
-	min-width: 270px;
+	width: 70%;
+	// min-width: 270px;
 	color:#727272;
 	display: flex;
 	flex-wrap: wrap;
@@ -32,13 +33,12 @@
 	// width: 500px;
 	&__wrapContact{
 		margin-top: 40px;
+
 	}
 	&__head{
 		color:#fff;
 		margin-bottom: 16px;
 
-	}
-	&__aboutmy{
 	}
 	&__cont{
 		color:inherit;
@@ -69,6 +69,7 @@
 	text-align: justify;
 	&__text{
 		text-indent:20px;
+		// min-width: 350px;
 	}
 }
 
@@ -101,3 +102,42 @@
 	}
 
 }
+
+// @media screen and (min-width:$dee_xl){
+
+// }
+// @media screen and (min-width:$dee_l){
+
+// }
+
+@media screen and (max-width:$dee_l){
+	.wrapCont{
+		width: inherit;
+		
+}
+@media screen and (max-width:$dee_m){
+	.wrapCont{
+		width: inherit;
+	}
+	.myfoto{
+	}
+	.details{
+		width: 100%;
+		margin-top: 5%;
+
+	}	
+}
+
+}
+@media screen and (max-width:$dee_s){
+
+}	
+@media screen and (max-width:$dee_xs){
+
+}
+@media screen and (max-width:$dee_xxs){
+
+}
+
+
+

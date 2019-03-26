@@ -1,18 +1,21 @@
 .banner{
 	color:$collight;
 	margin: 0 auto;
-	transition: 0.5s  ease;
-	transition-property: 
+	min-height: 100vh;
+	display: flex;
+	// position: relative;
+	transition: 0.5s ease;
+	transition-property:
 		padding-top,
 		padding-bottom,
 		white-space,
 		font-size;
-	
-	}
+}
 .headBlock{
-	margin: 0 auto;
-	padding-top: 20%;
-	padding-bottom: 26%;
+	// position: absolute;
+	margin: auto auto;
+	// padding-top: 50%;
+	// padding-bottom: 26%;
 	transition: inherit;
 }
 
@@ -27,50 +30,72 @@
 .headline{
 	font-size: 80px;
 	font-weight: bold;
-	margin-top: 24px;
+	// margin-top: 24px;
 	margin-bottom: 0;
 }
 .downLine{
 	margin-top: 30px;
 }
-@media screen and (max-width:$dee_s){
-		.banner{
-		margin: 0 auto;
-		&__head{
-			padding-top: 80px;
-			padding-bottom: 90px;
-		}
+
+@media screen and (max-width:$dee_m){
+	// .headBlock{
+	// 	padding-top: 60%;
+	// }
+	.headline{
+		font-size: 60px;
 	}
-	.upLine, .headline, .downLine{
+	.upLine,.downLine{
+		font-size: 19px;
+	}
+
+}
+@media screen and (max-width:$dee_s){
+	// .headBlock{
+	// 	padding-top: 60%;
+	// }
+	.upLine, .downLine{
 		font-size: 16px;
 	}
 	.headline{
-		font-size: 38px;
-		margin-top: 15px;
+		font-size: 45px;
 	}
-	
-}
-@media screen and (max-width:$dee_m){
-	.banner{
-		margin: 0 auto;
-		&__head{
-			padding-top: 110px;
-			padding-bottom: 120px;
-		}
-	}
+
+
+}	
+@media screen and (max-width:$dee_xs){
 	.headline{
-		font-size: 60px;
-		margin-top: 15px;
+		font-size: 35px;
 	}
-	
+	.upLine, .downLine{
+		font-size: 15px;
+	}
 
 }
+@media screen and (max-width:$dee_xxs){
+	.headline{
+		font-size: 40px;
+	}
+	.upLine, .downLine{
+		font-size: 14px;
+	}
+
+}
+
 // @media screen and (min-width:$dee_m){
+// 	.headBlock{
+// 		padding-top: 39%;
+// 	}
 
 // }
 // @media screen and (min-width:$dee_l){
+// 	.headBlock{
+// 		padding-top: 32%;
+// 	}
 
 // }
 // @media screen and (min-width:$dee_xl){
+// 	.headBlock{
+// 		padding-top: 28%;
+// 	}
 
 // }
