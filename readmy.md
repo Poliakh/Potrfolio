@@ -36,10 +36,10 @@
 - Резюме
 [ссылка на резюме в документы](https://docs.google.com/document/d/1fH2_HjlyACvZ0UCKCoN-JA23H_k2xLLi7DlCa1SHWEw/edit?usp=sharing)
 	- >возможно добавить стрелку назад
-	- создать генератор [pdf](https://github.com/MrRio/jsPDF)
+	- осталась проблема с совместимостью для safari атрибута 'download'
 	- подключить обработчик обытий по кнопкам
 	- переделать кнопки на [панель вверху](https://i.imgur.com/1e9WoPT.png)
-	- осталась проблема с совместимостью для safari атрибута 'download'
+	- создать генератор [pdf](https://github.com/MrRio/jsPDF)
 	- ~~добавить иконку на вкладку~~
 	- ~~добавить иконки на кнопки~~
 	- ~~создать версии pdf и doc~~
