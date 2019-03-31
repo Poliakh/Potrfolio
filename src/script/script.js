@@ -1,3 +1,17 @@
+let navbar = document.querySelector('.burger');
+navbar.addEventListener('mouseover ', animateBurger);
+function animateBurger(){
+	console.log(event.target);
+	
+}
+
+
+
+
+
+
+
+// create card -- start--
 let mylist = document.createDocumentFragment();
 let parentCards = document.querySelector('.cardWrap');
 let elemCard = parentCards.querySelector('.card');
@@ -23,4 +37,6 @@ fetch('ololo.json')
 .then(response => response.json())
 .then(parsObj)
 .catch( alert );
+// create card -- end--
+
 

@@ -3,20 +3,45 @@
 	margin: 0 auto;
 	min-height: 100vh;
 	display: flex;
-	// position: relative;
+	flex-direction: column;
+	align-items: center;
 	transition: 0.5s ease;
 	transition-property:
 		padding-top,
 		padding-bottom,
 		white-space,
 		font-size;
+	&__contactlist{
+		// margin-top: 44%;
+		width: 100%;
+		position: absolute;
+		left:50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		&::before{
+			display: block;
+			content: '';
+			width: 60%;
+			height: auto;
+			border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+			position: absolute;
+			left:50%;
+			transform: translateX(-50%);
+			top:-50px
+		}
+	
+	}
+}
+.banner .iconCont-baner{
+	width: 35px; 
+	height: 35px;
+	fill: rgba(255, 255, 255, 0.5);
 }
 .headBlock{
-	// position: absolute;
 	margin: auto auto;
-	// padding-top: 50%;
-	// padding-bottom: 26%;
 	transition: inherit;
+	position: relative;
+	height: 60vh;
 }
 
 .upLine, .headline, .downLine{

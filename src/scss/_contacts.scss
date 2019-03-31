@@ -1,6 +1,8 @@
 .contacts{
 	background-color: $bgcFoot;
 	// min-height: 345px;
+	// box-shadow: inset 0px 0px 8px hsla(0, 0%, 0%, 0.3) ;
+
 }
 .myfoto{
 	width: 120px;
@@ -24,13 +26,11 @@
 	margin-right: 40px;
 	margin-left: 40px;
 	width: 70%;
-	// min-width: 270px;
 	color:#727272;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	// width: 500px;
 	&__wrapContact{
 		margin-top: 40px;
 
@@ -103,17 +103,10 @@
 
 }
 
-// @media screen and (min-width:$dee_xl){
-
-// }
-// @media screen and (min-width:$dee_l){
-
-// }
-
 @media screen and (max-width:$dee_l){
 	.wrapCont{
 		width: inherit;
-		
+	}
 }
 @media screen and (max-width:$dee_m){
 	.wrapCont{
@@ -124,20 +117,5 @@
 	.details{
 		width: 100%;
 		margin-top: 5%;
-
 	}	
 }
-
-}
-@media screen and (max-width:$dee_s){
-
-}	
-@media screen and (max-width:$dee_xs){
-
-}
-@media screen and (max-width:$dee_xxs){
-
-}
-
-
-

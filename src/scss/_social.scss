@@ -1,20 +1,22 @@
 .social{
-	padding: 50px 0;
 	background-color: #f2f2f2;
 	transition: 0.5s all ease-in-out;
-
-	&__icon{
-		margin: 0 auto;
+	box-shadow: inset 0px 0px 8px hsla(0, 0%, 0%, 0.3) ;
+	&__contactlist{
+		padding: 50px 0;
 		width: 70%;
-		display: flex;
-		justify-content:
-		space-between;
-		align-self: flex-start;
-		flex-wrap: wrap;
-		transition: 0.8s all ease;
-
-
 	}
+
+}
+.contactlist{
+	margin-right: auto;
+	margin-left: auto;
+	display: flex;
+	justify-content:
+	space-between;
+	align-self: flex-start;
+	flex-wrap: wrap;
+	transition: 0.8s all ease;
 
 }
 .iconCont{

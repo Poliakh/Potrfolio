@@ -9,7 +9,8 @@ $dee_s:670px;
 $dee_m:815px;
 $dee_l:1024px;
 $dee_xl:1200px;
-
+html {
+	scroll-behavior: smooth; }
 
 *{
 	margin: 0;
@@ -18,6 +19,19 @@ $dee_xl:1200px;
 li{
 	list-style: none;
 	white-space: nowrap;
+}
+// body{
+// 	scroll-behavior: smooth;
+// }
+.wrap{
+	animation: fade 2s cubic-bezier(0.420, 0.210, 0.255, 0.855) forwards;
+	scroll-behavior: smooth;
+
+}
+@keyframes fade{
+	0%{opacity: 0;}
+	30%{opacity: 0;}
+	100%{opacity: 1;}
 }
 .wrap{
 	margin: 0 auto;
