@@ -166,7 +166,7 @@ gulp.task('script', ()=>{
 		.pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
-		// .pipe(browserSync.reload({stream:true})); //незачем
+		.pipe(browserSync.reload({stream:true})); 
 });
 
 gulp.task('server',()=>{
