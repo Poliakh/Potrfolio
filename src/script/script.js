@@ -1,3 +1,5 @@
+
+// --Menu burger start--
 let treeLine = document.querySelector('.bline')
 document.querySelector('body').addEventListener('mouseup', menuHover)
 function menuHover(event){
@@ -12,117 +14,62 @@ function menuHover(event){
 		document.querySelector('.menu').classList.remove('menuHover');
 	}
 }
-/*
-body.addEventListener('mouseover', animateBurger);
+// --Menu burger end--
 
- function animateBurgerOver(event){
-	if(event.target.closest('.menu') || event.target.closest('.burger')){
-		// console.log(event.target);
-		
-		treeLine.classList.add('burgeractive');
+//-------------------------------------------------------------------
+
+
+function ajaxSelect(wrapElem,card,link){
+	let myCards = document.createDocumentFragment();
+	let parentCards = document.querySelector(wrapElem);
+	let elemCard = parentCards.querySelector(card);
+
+	elemCard.hidden = false;
+	let showLoading = function(on){
+		let loader = document.querySelector('.loader');
+		(on)? loader.classList.add('loaderHide'):loader.classList.remove('loaderHide')
 	}
-}
-	console.log(`out with ${event.target}`);
-	if(event.target.closest('.menu') || event.target.closest('.burger')){
-			
-		// window.setTimeout(function(){
-			console.log('hi');
-		// 	treeLine.classList.remove('burgeractive');
-		// },1500);
-	}
- */
-// create card -- start--
-let mylist = document.createDocumentFragment();
-let parentCards = document.querySelector('.cardWrap');
-let elemCard = parentCards.querySelector('.card');
-parentCards.removeChild(elemCard);
-elemCard.hidden = false;
-
-let createCard = (obj) => {
-	let newCard = elemCard.cloneNode(true);
-	newCard.querySelector('.card__page').href = obj.gitpage;
-	newCard.querySelector('.card__hub').href = obj.github;
-	newCard.style.backgroundImage = `url("${obj.preview}")`;
-	return newCard;
-}
-// parentCards
-let parsObj = obj =>{
-	for (let key in obj){
-		mylist.appendChild(createCard(obj[key]));
-	}
-	parentCards.appendChild(mylist);	
-}
-
-fetch('ololo.json')
-.then(response => response.json())
-.then(parsObj)
-.catch( alert );
-// create card -- end--
-
-
-
-
-function ajaxSelect(id) {
-	var element = document.getElementById(id)
-
-	var onLoaded = function(data) {
-		var i=0
-		for(var key in data) {
-			var label = data[key]
-			element.options[i++] = new Option(label, key)
-		}
-	}
-
-	var onLoadError = function(error) {
-		var msg = "Ошибка "+error.errcode
-		if (error.message) msg = msg + ' :'+error.message
-		alert(msg)
-	}
-
-	var showLoading = function(on) {
-		element.disabled = on
-	}
-
-	var onSuccess = function(data) {
-		if (!data.errcode) {
-			onLoaded(data)
-			showLoading(false)
+	function checkStatus(response) {
+		if (response.status >= 200 && response.status < 300) {
+			return response
 		} else {
-			showLoading(false)
-			onLoadError(data)
+			showLoading(false);
+			var error = new Error("Ошибка " + response.statusText);
+			// error.response = response;
+			// throw error;
 		}
 	}
-    
-    
-    var onAjaxError = function(xhr, status){
-        showLoading(false)
-        var errinfo = { errcode: status }
-        if (xhr.status != 200) {
-            // может быть статус 200, а ошибка
-            // из-за некорректного JSON
-            errinfo.message = xhr.statusText
-        } else {
-            errinfo.message = 'Некорректные данные с сервера'
-        }
-        onLoadError(errinfo)
-    }
-
-    
-    return {
-        load: function(url) {
-            showLoading(true)
-
-            while (element.firstChild) {
-                element.removeChild(element.firstChild)
-            }
-
-            $.ajax({ // для краткости - jQuery
-                url: url,
-                dataType: "json",
-                success: onSuccess,
-                error: onAjaxError,
-                cache: false
-            })
-        }
-    }
+	function createCard (obj){
+		let newCard = elemCard.cloneNode(true);
+		newCard.querySelector('.card__page').href = obj.gitpage;
+		newCard.querySelector('.card__hub').href = obj.github;
+		newCard.style.backgroundImage = `url("${obj.preview}")`;
+		return newCard;
+	}
+	function parseJSON (obj){
+		for (let key in obj){
+			
+			myCards.appendChild(createCard(obj[key]));
+		}
+		parentCards.appendChild(myCards);	
+		return obj
+	}
+	return {
+		load : function(){
+					showLoading(true);
+					while(parentCards.querySelector(card)){
+						parentCards.removeChild(parentCards.querySelector(card))
+					}
+					fetch(link)
+					.then(checkStatus)
+					.then(response => response.json())
+					.then(parseJSON)
+					.catch(function(error) {
+						showLoading(false);
+						alert('request failed', error)
+					})
+				}
+	}
 }
+let select = ajaxSelect('.cardWrap', '.card','ololo.json' )
+select.load();
