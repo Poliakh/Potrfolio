@@ -1,9 +1,11 @@
-анимацию как [ тут](https://templatemag.com/demo/Jack/)  
+анимацию как [тут](https://templatemag.com/demo/Jack/)  
 Подключить [линтер сасс](https://www.master-web.info/kak-lintovat-vash-sass-css-stylelint/)  
 
+## Плaн 
 
-## Плaн  
+- основное  
 	- добавить анимацию на загрузку страницы  
+	- добавить [паралакс эффект](https://www.youtube.com/watch?v=neYjdM3D_S8)  
 - Навигация  
 	- добавить событие бургеру  
 	- ~~сделать переход (якорение)~~
@@ -38,6 +40,7 @@
 
 - Резюме
 [ссылка на резюме в документы](https://docs.google.com/document/d/1fH2_HjlyACvZ0UCKCoN-JA23H_k2xLLi7DlCa1SHWEw/edit?usp=sharing)
+	- убрать надпись "портфолио" в версии print
 	- >возможно добавить стрелку назад
 	- проверить адаптацию на экране меньше 400px(вылазят кнопки) 
 	- осталась проблема с совместимостью для safari атрибута 'download'
