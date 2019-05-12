@@ -19,8 +19,18 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding-bottom: 63px;
+	position: relative;
 	// margin-right: -15px;
 	// margin-left: -15px;
+}
+.loader{
+	width: 40%;
+	height: 17px;
+	display: block;
+	margin: auto;
+}
+.loaderHide{
+	display: none;
 }
 
 @media screen and (max-width:$dee_s){
