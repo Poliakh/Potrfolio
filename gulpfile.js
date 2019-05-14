@@ -159,10 +159,10 @@ gulp.task('script', ()=>{
 	gulp.src(path.src.js)
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
-		.pipe(concat('script.js'))
-		.pipe(babel({
-			presets: ['@babel/env']
-		}))
+		// .pipe(concat('script.js'))
+		// .pipe(babel({
+		// 	presets: ['@babel/env']
+		// }))
 		.pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))

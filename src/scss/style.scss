@@ -20,14 +20,14 @@ li{
 	list-style: none;
 	white-space: nowrap;
 }
-// body{
-// 	scroll-behavior: smooth;
-// }
-.wrap{
-	animation: fade 2s cubic-bezier(0.420, 0.210, 0.255, 0.855) forwards;
+body{
 	scroll-behavior: smooth;
-
 }
+// .wrap{
+// 	animation: fade 2s cubic-bezier(0.420, 0.210, 0.255, 0.855) forwards;
+// 	scroll-behavior: smooth;
+
+// }
 @keyframes fade{
 	0%{opacity: 0;}
 	30%{opacity: 0;}

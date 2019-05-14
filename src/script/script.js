@@ -1,22 +1,21 @@
-
-// --Menu burger start--
-let treeLine = document.querySelector('.bline')
-document.querySelector('body').addEventListener('mouseup', menuHover)
-function menuHover(event){
-	if(event.target.closest('.burger') || event.target.closest('.menu') ){
-		document.querySelector('.burger').classList.toggle('burgerHover');
-		document.querySelector('.bline').classList.toggle('burgerLineAnimate');
-		document.querySelector('.menu').classList.toggle('menuHover');
+// --Burger--
+(function(){
+	let treeLine = document.querySelector('.bline')
+	document.querySelector('body').addEventListener('mouseup', menuHover)
+	function menuHover(event){
+		if(event.target.closest('.burger') || event.target.closest('.menu') ){
+			document.querySelector('.burger').classList.toggle('burgerHover');
+			document.querySelector('.bline').classList.toggle('burgerLineAnimate');
+			document.querySelector('.menu').classList.toggle('menuHover');
+		}
+		if(!event.target.closest('.burger')){
+			document.querySelector('.burger').classList.remove('burgerHover');
+			document.querySelector('.bline').classList.remove('burgerLineAnimate');
+			document.querySelector('.menu').classList.remove('menuHover');
+		}
 	}
-	if(!event.target.closest('.burger')){
-		document.querySelector('.burger').classList.remove('burgerHover');
-		document.querySelector('.bline').classList.remove('burgerLineAnimate');
-		document.querySelector('.menu').classList.remove('menuHover');
-	}
-}
-// --Menu burger end--
-//-------------------------------------------------------------------
-
+})()
+// --burger end--
 
 function AjaxSelect(wrapElem,card){
 	let myCards = document.createDocumentFragment();
@@ -66,6 +65,8 @@ function AjaxSelect(wrapElem,card){
 		})
 	}
 }
-
 let ajaxSelect = new AjaxSelect('.cardWrap', '.card')
-ajaxSelect.load('ololo.json');
+ajaxSelect.load('data.json');
+
+//--wow--
+new WOW().init();

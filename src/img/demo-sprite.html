@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Style Demo</title>
+	<style>
+		*{
+			font-family: Tahoma;
+		}
+		.iconSprite{
+			width: 40px;
+			height: 40px;
+			fill: rgb(255, 255, 255);
+			background-color: rgba(0, 0, 0, 0.479);
+			padding: 3px;
+		}
+		.dang{
+			font-weight: bolder;
+			color:rgb(63, 63, 63);
+		}
+		.nameId{
+			font-size: 18px;
+			margin-left: 15px;
+			margin-bottom: 50%;
+			position: relative;
+			bottom: 17px;
+		}
+
+
+	</style>
+</head>
+<body>
+	<h2 class="dang">Локально работает только в мозиле</h2> 
+	<svg class="iconSprite">
+		<use xlink:href="./contacts_portfolio_sprite.svg#fbk"></use>
+	</svg>
+	<span class="nameId">fbk</span><br>
+	<svg class="iconSprite">
+		<use xlink:href="contacts_portfolio_sprite.svg#linkin"></use>
+	</svg>
+	<span class="nameId">linkin</span><br>
+
+	<svg class="iconSprite">
+		<use xlink:href="contacts_portfolio_sprite.svg#viber"></use>
+	</svg>
+	<span class="nameId">viber</span><br>
+	<svg class="iconSprite">
+		<use xlink:href="contacts_portfolio_sprite.svg#teleg"></use>
+	</svg>
+	<span class="nameId">teleg</span><br>
+	<svg class="iconSprite">
+		<use xlink:href="contacts_portfolio_sprite.svg#gmail"></use>
+	</svg>
+	<span class="nameId">gmail</span><br>
+	<svg class="iconSprite">
+		<use xlink:href="contacts_portfolio_sprite.svg#skype"></use>
+	</svg>
+	<span class="nameId">skype</span><br>
+	<svg class="iconSprite">
+		<use xlink:href="contacts_portfolio_sprite.svg#github"></use>
+	</svg>
+	<span class="nameId">github</span><br>
+
+</body>
+</html>
