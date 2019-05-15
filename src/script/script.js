@@ -70,3 +70,19 @@ ajaxSelect.load('data.json');
 
 //--wow--
 new WOW().init();
+
+
+function addDelayAnimation(parentCLass,targetClass,incremdelay,delay){
+
+	let listIcon = document.querySelector(parentCLass).querySelectorAll(targetClass);
+	console.log(listIcon);
+	
+	listIcon.forEach(element => {
+		delay+= incremdelay;
+		element.getAttribute('data-wow-delay');
+			element.dataset.wowDelay = delay + 's';
+		});
+}
+addDelayAnimation('.social','.fadeInUp',0.2, 0);
+addDelayAnimation('.contactlist','.fadeInRight',0.2,0.8);
+addDelayAnimation('.menu','.wow',0.2,0.5);
