@@ -51,7 +51,7 @@ function AjaxSelect(wrapElem,card){
 			showLoading(false);
 			parentCards.appendChild(myCards);	
 	}
-	this.load = (url)=>{
+/* 	this.load = (url)=>{
 		showLoading(true);
 		while(parentCards.querySelector(card)){
 			parentCards.removeChild(parentCards.querySelector(card))
@@ -63,19 +63,35 @@ function AjaxSelect(wrapElem,card){
 			showLoading(false);
 			alert('request failed', error)
 		})
+	} */
+
+	this.load = (url)=>{
+		showLoading(true);
+		while(parentCards.querySelector(card)){
+			parentCards.removeChild(parentCards.querySelector(card))
+		}
+		asyncFetch = async()=>{
+			let response = await fetch(url);
+			let obj = await checkStatus(response)
+			await parseJSON(obj);
+			await addDelayAnimation('.cardWrap','.card',0.2,0.5);
+
+		}
+
+		asyncFetch();
 	}
+
 }
+
 let ajaxSelect = new AjaxSelect('.cardWrap', '.card')
 ajaxSelect.load('data.json');
 
 //--wow--
 new WOW().init();
-
-
 function addDelayAnimation(parentCLass,targetClass,incremdelay,delay){
 
 	let listIcon = document.querySelector(parentCLass).querySelectorAll(targetClass);
-	console.log(listIcon);
+	// console.log(listIcon);
 	
 	listIcon.forEach(element => {
 		delay+= incremdelay;
