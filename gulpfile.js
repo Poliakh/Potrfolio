@@ -20,7 +20,7 @@ let gulp			= require ('gulp'),
 
 	imagemin		= require('gulp-imagemin'), // Подключаем библиотеку для работы с изображениями
 	pngquant		= require('imagemin-pngquant'), // Подключаем библиотеку для работы с png
-	imageminWebp = require('imagemin-webp'),
+	imageminWebp	= require('imagemin-webp'),
 	cache			= require('gulp-cache'), // Подключаем библиотеку кеширования
 	util			= require('gulp-util');
 	
@@ -33,10 +33,10 @@ let gulp			= require ('gulp'),
 			fonts:	'build/fonts/'
 		},
 		src: { //Пути откуда брать исходники
-			src:'src/',
-			block:'src/blocks/',
+			src:	'src/',
+			block:	'src/blocks/',
 			html:	'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-			js:		'src/script/**/*.js',//В стилях и скриптах нам понадобятся только main файлы
+			js:		'src/script',//В стилях и скриптах нам понадобятся только main файлы
 			scss:	'src/scss/style.scss',
 			css:	'src/css/**/*.css',
 			img:	'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
@@ -51,26 +51,10 @@ let gulp			= require ('gulp'),
 			img:	'src/img/**/*.*',
 			fonts:	'src/fonts/**/*.*'
 		},
-		dir: 'build',
-		produc:'../poliakh.github.io/myportfolio',
-		test : 'test'
+		dir:	'build',
+		produc:	'../poliakh.github.io/myportfolio',
+		test :	'test'
 	};
-
-
-gulp.task('my', ()=>{
-	// console.log('hello world!!!');
-	gulp.src(path.src.scss)
-	.pipe(gulp.dest(path.produc))
-
-});
-
-gulp.task('create', ()=>{
-	// gulp.src('*.*', {read: false})
-	gulp.start('build');
-	gulp.start('my');
-	gulp.src(path.dir)
-		.pipe(gulp.dest(path.produc))
-});
 
 // watch
 gulp.task('default',['build','server'], ()=>{
@@ -80,7 +64,7 @@ gulp.task('default',['build','server'], ()=>{
 	gulp.watch(path.watch.img, ['img']);
 });
 //-------------- для запуска версии prodaction-----------------
-//	gulp build --prod  - создает версию с компрессией
+//	gulp build --prod  - создает версию с минимизацией
 //	gulp prod - переносит в папку  prodaction
 //---------------------end-----------------------------------
 gulp.task('ex',['build','prod'], ()=>{
@@ -122,18 +106,18 @@ gulp.task('htmlmin', ()=>{
 //style
 gulp.task('sass', ()=>{
 	gulp.src(path.src.scss)
-	.pipe(sourcemaps.init())
-	.pipe( sass()
-			.on( 'error', notify.onError(
-				{
-					message: "<%= error.message %>",
-					title  : "Sass Error!",
-				} )
-			))
-	.pipe(autoprefixer(
-		['last 3 version', '> 1%', 'ie 8', 'ie 7'],
-		{cascade: true}))
-		// .pipe(cssnano())
+		.pipe(sourcemaps.init())
+		.pipe( sass()
+				.on( 'error', notify.onError(
+					{
+						message: "<%= error.message %>",
+						title  : "Sass Error!",
+					} )
+				))
+		.pipe(autoprefixer(
+			['last 3 version', '> 1%', 'ie 8', 'ie 7'],
+			{cascade: true}))
+			// .pipe(cssnano())
 		.pipe(gulpif(argv.prod, cleanCSS({debug: true}, (details) => {
 			console.log(`${details.name}: ${details.stats.originalSize}`);
 			console.log(`${details.name}: ${details.stats.minifiedSize}`);
@@ -141,7 +125,7 @@ gulp.task('sass', ()=>{
 		.pipe(gulpif(!argv.prod, sourcemaps.write('.')))
 		.pipe(gulp.dest(path.build.style))
 		.pipe(browserSync.reload({stream:true}))
-	});
+});
 
 
 //css - работает
@@ -156,20 +140,23 @@ gulp.task('sass', ()=>{
 
 //script
 gulp.task('script', ()=>{
-	gulp.src(path.src.js)
+	gulp.src(path.src.js+'/script.js')
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		// .pipe(concat('script.js'))
-		// .pipe(babel({
-		// 	presets: ['@babel/env']
-		// }))
+		.pipe(babel({
+			presets: ['@babel/env']
+		}))
 		.pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
-		.pipe(browserSync.reload({stream:true})); 
+		.pipe(browserSync.reload({stream:true}));
+
+		gulp.src(path.src.js +'/wow.js')
+		.pipe(gulp.dest(path.build.js));
 });
 
-gulp.task('server',()=>{
+gulp.task('server', ()=>{
 	browserSync({
 		server:{
 			baseDir:'build'
