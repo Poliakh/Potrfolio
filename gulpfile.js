@@ -210,12 +210,12 @@ gulp.task('clean', ()=>{
 });
 gulp.task('cleanProd', ()=>{
 	del.sync(
-			["../poliakh.github.io/myportfolio/css",
-			"../poliakh.github.io/myportfolio/fonts",
-			"../poliakh.github.io/myportfolio/img",
-			"../poliakh.github.io/myportfolio/preview",
-			"../poliakh.github.io/myportfolio/script",
-			"../poliakh.github.io/myportfolio/index.html"],
+			[path.produc + "/css",
+			path.produc + "/fonts",
+			path.produc + "/img",
+			path.produc + "/preview",
+			path.produc + "/script",
+			path.produc + "/index.html"],
 	{'force':true});
 });
 
