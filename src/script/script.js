@@ -51,7 +51,7 @@ function AjaxSelect(wrapElem,card){
 			showLoading(false);
 			parentCards.appendChild(myCards);	
 	}
-	this.load = (url)=>{
+/* 	this.load = (url)=>{
 		showLoading(true);
 		while(parentCards.querySelector(card)){
 			parentCards.removeChild(parentCards.querySelector(card))
@@ -63,12 +63,35 @@ function AjaxSelect(wrapElem,card){
 			showLoading(false);
 			alert('request failed', error)
 		})
-	}
+	} */
+	this.load = (url)=>{
+		showLoading(true);
+		while(parentCards.querySelector(card)){
+			parentCards.removeChild(parentCards.querySelector(card));
+		}
+		asyncFetch = async()=>{
+			let response = await fetch(url);
+			let obj = await checkStatus(response)
+			await parseJSON(obj);
+			await addDelayAnimation('.cardWrap','.card',0.2,0.5);
+
+		}
+
+		asyncFetch();
 }
-// look it https://gist.github.com/msmfsd/fca50ab095b795eb39739e8c4357a808
+
+
+}
+
 let ajaxSelect = new AjaxSelect('.cardWrap', '.card')
 ajaxSelect.load('data.json');
 
+//-------------------------------------<--
+
+
+
+// look it https://gist.github.com/msmfsd/fca50ab095b795eb39739e8c4357a808
+// 
 //--wow--
 new WOW().init();
 

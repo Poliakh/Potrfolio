@@ -140,19 +140,20 @@ gulp.task('sass', ()=>{
 
 //script
 gulp.task('script', ()=>{
-	gulp.src(path.src.js+'/script.js')
+	gulp.src(path.src.js + '/script.js')
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		// .pipe(concat('script.js'))
 		.pipe(babel({
-			presets: ['@babel/env']
+			// presets: ['@babel/env'],
+			plugins: ['@babel/transform-runtime']
 		}))
-		.pipe(gulpif(argv.prod, uglify()))//минимазция js
+		// .pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
 		.pipe(browserSync.reload({stream:true}));
 
-		gulp.src(path.src.js +'/wow.js')
+		gulp.src(path.src.js + '/wow.js')
 		.pipe(gulp.dest(path.build.js));
 });
 
