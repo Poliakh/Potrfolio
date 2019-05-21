@@ -69,7 +69,7 @@ function AjaxSelect(wrapElem,card){
 		while(parentCards.querySelector(card)){
 			parentCards.removeChild(parentCards.querySelector(card));
 		}
-		asyncFetch = async()=>{
+		fetchAsync = async()=>{
 			let response = await fetch(url);
 			let obj = await checkStatus(response)
 			await parseJSON(obj);
@@ -77,7 +77,7 @@ function AjaxSelect(wrapElem,card){
 
 		}
 
-		asyncFetch();
+		fetchAsync();
 }
 
 
