@@ -1,4 +1,4 @@
-[Portfolio page](https://github.com/Poliakh)
+## [Portfolio link to the page](https://github.com/Poliakh)
 
 анимацию как [тут](https://templatemag.com/demo/Jack/)  
 Подключить [линтер сасс](https://www.master-web.info/kak-lintovat-vash-sass-css-stylelint/)  
