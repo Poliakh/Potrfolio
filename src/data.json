@@ -17,10 +17,17 @@
 				"preview":"preview/upbusinessx2.jpg",
 				"difficulty":"5"
 			},
-	"biseline": {		
+	"biseline": {
 				"gitpage":"https://poliakh.github.io/myportfolio/makets/bislite",
 				"github":"https://github.com/Poliakh/maket-02.git",
 				"preview":"preview/biselinex2.jpg",
 				"difficulty":"3"
+			},
+	"myclock": {
+				"gitpage":"poliakh.github.io/myportfolio/makets/myclocks/",
+				"github":"https://github.com/Poliakh/MyClocks",
+				"preview":"preview/clockx2.jpg",
+				"difficulty":"7"
 			}
+
 }
