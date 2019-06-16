@@ -144,12 +144,12 @@ gulp.task('script', ()=>{
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		// .pipe(concat('script.js'))
-		// .pipe(babel({
-		// 	presets: [['@babel/env', {
-		// 		modules: 'commonjs'
-		// 	}]]
-		// 	// plugins: ["@babel/plugin-transform-runtime"]
-		// }))
+		.pipe(babel({
+			presets: [['@babel/env', {
+				modules: 'commonjs',
+				plugins: ["@babel/plugin-transform-runtime"]
+			}]]
+		}))
 		// .pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
