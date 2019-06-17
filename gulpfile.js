@@ -3,6 +3,7 @@ let gulp			= require ('gulp'),
 	sourcemaps		= require('gulp-sourcemaps'),
 	autoprefixer	= require('gulp-autoprefixer'),
 	gulpImport		= require('gulp-html-import'),
+	rigger 		= require('gulp-rigger'),
 	htmlMin			= require('gulp-htmlmin'),
 	browserSync		= require('browser-sync'),		//виртуальный браузер
 	concat			= require('gulp-concat'),
@@ -93,9 +94,10 @@ gulp.task('htmlmin', ()=>{
 	gulp.src(path.src.html)
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
-		.pipe(gulpImport(path.src.block))
-		.pipe(gulpImport(path.src.block))
-		.pipe(gulpImport(path.src.block + 'other/'))
+		.pipe(rigger())
+		// .pipe(gulpImport(path.src.block))
+		// .pipe(gulpImport(path.src.block))
+		// .pipe(gulpImport(path.src.block + 'other/'))
 		.pipe(gulpif(argv.prod,
 			htmlMin({collapseWhitespace: true,removeComments: true})))
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
@@ -144,12 +146,12 @@ gulp.task('script', ()=>{
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
 		// .pipe(concat('script.js'))
-		.pipe(babel({
-			presets: [['@babel/env', {
-				modules: 'commonjs',
-				plugins: ["@babel/plugin-transform-runtime"]
-			}]]
-		}))
+		// .pipe(babel({
+		// 	presets: [['@babel/env', {
+		// 		modules: 'commonjs',
+		// 		plugins: ["@babel/plugin-transform-runtime"]
+		// 	}]]
+		// }))
 		// .pipe(gulpif(argv.prod, uglify()))//минимазция js
 		.pipe(gulpif(!argv.prod, sourcemaps.write()))
 		.pipe(gulp.dest(path.build.js))
