@@ -1,17 +1,20 @@
 // --Burger--
 (function(){
-	let treeLine = document.querySelector('.bline')
-	document.querySelector('body').addEventListener('mouseup', menuHover)
+	let burgerButton = document.querySelector('.burger');
+	let burgerLine = document.querySelector('.bline');
+	let navMenu = document.querySelector('.menu');
+	
+	document.querySelector('body').addEventListener('mouseup', menuHover);
 	function menuHover(event){
 		if(event.target.closest('.burger') || event.target.closest('.menu') ){
-			document.querySelector('.burger').classList.toggle('burgerActive');
-			document.querySelector('.bline').classList.toggle('burgerLineAnimate');
-			document.querySelector('.menu').classList.toggle('menuHover');
+			burgerButton.classList.toggle('burgerActive');
+			burgerLine.classList.toggle('burgerLineAnimate');
+			navMenu.classList.toggle('menuHover');
 		}
 		if(!event.target.closest('.burger')){
-			document.querySelector('.burger').classList.remove('burgerActive');
-			document.querySelector('.bline').classList.remove('burgerLineAnimate');
-			document.querySelector('.menu').classList.remove('menuHover');
+			burgerButton.classList.remove('burgerActive');
+			burgerLine.classList.remove('burgerLineAnimate');
+			navMenu.classList.remove('menuHover');
 		}
 	}
 })()
@@ -26,6 +29,7 @@ function AjaxSelect(wrapElem,card){
 		let loader = document.querySelector('.loader');
 		(on)? loader.classList.remove('loaderHide'):loader.classList.add('loaderHide')
 	}
+	
 	let checkStatus = (response)=>{
 		if (response.ok) {
 			return response.json()
@@ -36,6 +40,7 @@ function AjaxSelect(wrapElem,card){
 			throw error;
 		}
 	}
+
 	let createCard = (obj)=>{
 		let newCard = elemCard.cloneNode(true);
 		newCard.hidden = false;
@@ -44,6 +49,7 @@ function AjaxSelect(wrapElem,card){
 		newCard.style.backgroundImage = `url("${obj.preview}")`;
 		return newCard;
 	}
+
 	let parseJSON = (obj)=>{
 		for (let key in obj){
 			myCards.appendChild(createCard(obj[key]));
@@ -51,30 +57,23 @@ function AjaxSelect(wrapElem,card){
 			showLoading(false);
 			parentCards.appendChild(myCards);	
 	}
-/* 	this.load = (url)=>{
-		showLoading(true);
-		while(parentCards.querySelector(card)){
-			parentCards.removeChild(parentCards.querySelector(card))
-		}
-		fetch(url)
-		.then(checkStatus)
-		.then(parseJSON)
-		.catch((error)=>{
-			showLoading(false);
-			alert('request failed', error)
-		})
-	} */
+
 	this.load = (url)=>{
 		showLoading(true);
 		while(parentCards.querySelector(card)){
 			parentCards.removeChild(parentCards.querySelector(card));
 		}
 		fetchAsync = async()=>{
-			let response = await fetch(url);
-			let obj = await checkStatus(response)
-			await parseJSON(obj);
-			await addDelayAnimation('.cardWrap','.card',0.2,0.5);
-
+			try {
+				let response = await fetch(url);
+				let obj = await checkStatus(response)
+				await parseJSON(obj);
+				await addDelayAnimation('.cardWrap','.card',0.2,0.5);
+			} catch (error) {
+				showLoading(false);
+				alert('request failed', error)
+	
+			}
 		}
 
 		fetchAsync();

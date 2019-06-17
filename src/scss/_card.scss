@@ -6,6 +6,7 @@
 	background-repeat: no-repeat;
 	background-position: top center;
 	background-size: cover;
+	border-radius: 2px;
 	// background-image: url(../img/dahoot.jpg);
 	// border:solid 1px rgba(255, 255, 255, 0);
 	filter: grayscale(1);
@@ -17,10 +18,12 @@
 	}
 	&:hover{
 		// box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
-		box-shadow:0 0 10px 2px rgba(0, 0, 0, 0.3);
+		box-shadow: 12px 8px 10px 5px rgba(0, 0, 0, 0.2);
 		// border:solid 1px rgba(0, 0, 0, 0.4);
-		transition: 0.3s ease;
-		filter:  grayscale(0);
+		transform: translateY(-2px);
+		transform: translateX(-1px);
+		transition: 0.5s ease-out;
+		filter: grayscale(0);
 
 	}
 	&__link{
