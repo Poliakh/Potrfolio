@@ -10,9 +10,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="200"
+   height="200"
+   viewBox="0 0 52.916665 52.916668"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
@@ -35,19 +35,20 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.088388348"
-     inkscape:cx="-1553.3899"
-     inkscape:cy="3.335272"
+     inkscape:zoom="0.45254834"
+     inkscape:cx="-337.71416"
+     inkscape:cy="613.02778"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="1691"
-     inkscape:window-height="897"
-     inkscape:window-x="651"
-     inkscape:window-y="180"
-     inkscape:window-maximized="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1361"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
      showguides="true"
-     inkscape:guide-bbox="true" />
+     inkscape:guide-bbox="true"
+     units="px" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -56,14 +57,15 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
-     id="layer1">
+     id="layer1"
+     transform="translate(0,-244.08332)">
     <g
        id="g6158"
        transform="translate(-7.4835468,66.955064)">
@@ -249,7 +251,7 @@
     </g>
     <g
        id="g7024"
-       transform="matrix(0.54555841,0,0,0.54555841,299.05289,-1.8781968)">
+       transform="matrix(0.54555841,0,0,0.54555841,293.35853,112.56486)">
       <g
          id="g7047"
          transform="matrix(1.0063414,0,0,1.0063414,-855.56254,-507.75824)">

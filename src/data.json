@@ -1,33 +1,42 @@
 {
-	"duhoot": {
-				"gitpage":"https://poliakh.github.io/myportfolio/makets/duhoot",
-				"github":"https://github.com/Poliakh/Maket-duhoot.git",
-				"preview":"preview/duhootx2.jpg",
-				"difficulty":"7"
-			},
-	"surfase": {
-				"gitpage":"https://poliakh.github.io/myportfolio/makets/surface",
-				"github":"https://github.com/Poliakh/Maket-surface.git",
-				"preview":"preview/surfasex2.jpg",
-				"difficulty":"6"
-			},
-	"upbusiness": {
-				"gitpage":"https://poliakh.github.io/myportfolio/makets/upbusiness",
-				"github":"https://github.com/Poliakh/03-Maket.git",
-				"preview":"preview/upbusinessx2.jpg",
-				"difficulty":"5"
-			},
-	"biseline": {
-				"gitpage":"https://poliakh.github.io/myportfolio/makets/bislite",
-				"github":"https://github.com/Poliakh/maket-02.git",
-				"preview":"preview/biselinex2.jpg",
-				"difficulty":"3"
-			},
 	"myclock": {
-				"gitpage":"poliakh.github.io/myportfolio/makets/myclocks/",
-				"github":"https://github.com/Poliakh/MyClocks",
-				"preview":"preview/clockx2.jpg",
-				"difficulty":"7"
-			}
-
+		"header":"MyClock",
+		"gitpage":"https://poliakh.github.io/myportfolio/makets/myclocks/",
+		"github":"https://github.com/Poliakh/MyClocks",
+		"preview":"preview/clockx2.jpg",
+		"difficulty":"7",
+		"stack":["sass","gulp","es6","flex"]
+	},
+	"duhoot": {
+		"header":"Duhoot",
+		"gitpage":"https://poliakh.github.io/myportfolio/makets/duhoot",
+		"github":"https://github.com/Poliakh/Maket-duhoot.git",
+		"preview":"preview/duhootx2.jpg",
+		"difficulty":"7",
+		"stack":["sass","gulp","es6","flex"]
+	},
+	"surfase": {
+		"header":"Surfase",
+		"gitpage":"https://poliakh.github.io/myportfolio/makets/surface",
+		"github":"https://github.com/Poliakh/Maket-surface.git",
+		"preview":"preview/surfasex2.jpg",
+		"difficulty":"6",
+		"stack":["sass","gulp","flex"]
+	},
+	"upbusiness": {
+		"header":"UpBusiness",
+		"gitpage":"https://poliakh.github.io/myportfolio/makets/upbusiness",
+		"github":"https://github.com/Poliakh/03-Maket.git",
+		"preview":"preview/upbusinessx2.jpg",
+		"difficulty":"5",
+		"stack":["sass","gulp","float"]
+	},
+	"biseline": {
+		"header":"Bise-Line",
+		"gitpage":"https://poliakh.github.io/myportfolio/makets/bislite",
+		"github":"https://github.com/Poliakh/maket-02.git",
+		"preview":"preview/biselinex2.jpg",
+		"difficulty":"3",
+		"stack":["sass","gulp","float"]
+	}
 }
