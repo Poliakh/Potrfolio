@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +7,9 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Style Demo</title>
 	<style>
+		body{
+			background-color: rgb(205, 199, 173);
+		}
 		*{
 			font-family: Tahoma;
 		}
@@ -25,7 +29,18 @@
 			margin-left: 15px;
 			margin-bottom: 50%;
 			position: relative;
-			bottom: 17px;
+			bottom: 34px;
+		}
+		.wrap{
+			display: flex;
+		}
+		.spritbox{
+			width: 300px;
+			padding: 20px;
+			border: 1px solid gray;
+			border-radius: 30px;
+			margin-right: 15px;
+			margin-left: 15px;
 		}
 
 
@@ -33,40 +48,79 @@
 </head>
 <body>
 	<h2 class="dang">Локально работает только в мозиле</h2> 
-	<h3>contacts_portfolio_sprite.svg</h3>
-	<svg class="iconSprite">
-		<use xlink:href="./contacts_portfolio_sprite.svg#fbk"></use>
-	</svg>
-	<span class="nameId">fbk</span><br>
-	<svg class="iconSprite">
-		<use xlink:href="contacts_portfolio_sprite.svg#linkin"></use>
-	</svg>
-	<span class="nameId">linkin</span><br>
+		<div class="wrap">
+			<div class="spritbox">
+				<h3>contacts_portfolio_sprite.svg</h3>
+				<svg class="iconSprite">
+					<use xlink:href="contacts_portfolio_sprite.svg#fbk"></use>
+				</svg>
+				<span class="nameId">#fbk</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="contacts_portfolio_sprite.svg#linkin"></use>
+				</svg>
+				<span class="nameId">#linkin</span><br>
+			
+				<svg class="iconSprite">
+					<use xlink:href="contacts_portfolio_sprite.svg#viber"></use>
+				</svg>
+				<span class="nameId">#viber</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="contacts_portfolio_sprite.svg#teleg"></use>
+				</svg>
+				<span class="nameId">#teleg</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="contacts_portfolio_sprite.svg#gmail"></use>
+				</svg>
+				<span class="nameId">#gmail</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="contacts_portfolio_sprite.svg#skype"></use>
+				</svg>
+				<span class="nameId">#skype</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="contacts_portfolio_sprite.svg#github"></use>
+				</svg>
+				<span class="nameId">#github</span><br>
+			</div>
+			<div class="spritbox">
+				<h3>stack_sprite.svg</h3>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#float"></use>
+				</svg>
+				<span class="nameId">#float</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#svg"></use>
+				</svg>
+				<span class="nameId">#svg</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#flex"></use>
+				</svg>
+				<span class="nameId">#flex</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#git"></use>
+				</svg>
+				<span class="nameId">#git</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#es6"></use>
+				</svg>
+				<span class="nameId">#es6</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#resp"></use>
+				</svg>
+				<span class="nameId">#resp</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#sass"></use>
+				</svg>
+				<span class="nameId">#sass</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#js"></use>
+				</svg>
+				<span class="nameId">#js</span><br>
+				<svg class="iconSprite">
+					<use xlink:href="stack_sprite.svg#gulp"></use>
+				</svg>
+				<span class="nameId">#gulp</span><br>
+			</div>
 
-	<svg class="iconSprite">
-		<use xlink:href="contacts_portfolio_sprite.svg#viber"></use>
-	</svg>
-	<span class="nameId">viber</span><br>
-	<svg class="iconSprite">
-		<use xlink:href="contacts_portfolio_sprite.svg#teleg"></use>
-	</svg>
-	<span class="nameId">teleg</span><br>
-	<svg class="iconSprite">
-		<use xlink:href="contacts_portfolio_sprite.svg#gmail"></use>
-	</svg>
-	<span class="nameId">gmail</span><br>
-	<svg class="iconSprite">
-		<use xlink:href="contacts_portfolio_sprite.svg#skype"></use>
-	</svg>
-	<span class="nameId">skype</span><br>
-	<svg class="iconSprite">
-		<use xlink:href="contacts_portfolio_sprite.svg#github"></use>
-	</svg>
-	<span class="nameId">github</span><br>
-	<h3>stack_sprite.svg</h3>
-	<svg class="iconSprite">
-		<use xlink:href="stack_sprite.svg#float"></use>
-	</svg>
-	
+		</div		
 </body>
 </html>
