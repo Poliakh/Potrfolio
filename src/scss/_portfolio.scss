@@ -87,7 +87,7 @@
 		width: 315px;
 		height: 210px; */
 		width: 410px;
-		height: calc(410px / 1.5);
+		height: 273px;//(410/1.5)
 	}
 }
 @media screen and (min-width:$dee_xl){
@@ -102,7 +102,7 @@
 		width: 376px;
 		height: 251px; */
 		width: 500px;
-		height: calc(500px / 1.5);
+		height: 333px;//calc(500px / 1.5);
 	}
 
 }

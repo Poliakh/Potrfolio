@@ -43,10 +43,25 @@ function AjaxSelect(wrapElem,card){
 
 	let createCard = (obj)=>{
 		let newCard = elemCard.cloneNode(true);
+		
 		newCard.hidden = false;
-		newCard.querySelector('.card__page').href = obj.gitpage;
-		newCard.querySelector('.card__hub').href = obj.github;
+		newCard.querySelector('.descript__page').href = obj.gitpage;
+		newCard.querySelector('.descript__hub').href = obj.github;
+		newCard.querySelector('.descript__head').innerText = obj.header;
+		newCard.querySelector('.descript__text').innerHTML = obj.descript;
 		newCard.style.backgroundImage = `url("${obj.preview}")`;
+		// createListStack();
+		(function createListStack(){
+			try {
+				let ta = newCard.querySelectorAll('.iconSprite use') ;
+			console.log(ta[0].href.animVal);
+			//img/stack_sprite.svg#resp
+			} catch (error) {
+				console.error('error');
+				
+			}
+		})()
+
 		return newCard;
 	}
 
@@ -72,14 +87,10 @@ function AjaxSelect(wrapElem,card){
 			} catch (error) {
 				showLoading(false);
 				alert('request failed', error)
-	
 			}
 		}
-
 		fetchAsync();
-}
-
-
+	}
 }
 
 let ajaxSelect = new AjaxSelect('.cardWrap', '.card')

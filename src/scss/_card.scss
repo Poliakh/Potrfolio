@@ -5,26 +5,73 @@
 	box-sizing:border-box;
 	background-repeat: no-repeat;
 	background-position: top center;
-	background-size: cover;
-	border-radius: 2px;
+	background-size: 105%;
+	border-radius: 3px;
 	// background-image: url(../img/dahoot.jpg);
 	// border:solid 1px rgba(255, 255, 255, 0);
-	filter: grayscale(1);
+	// filter: grayscale(1);
 	overflow: hidden;
-
+	border:solid 1px rgba(0, 0, 0, 0);
+	transition: box-shadow 0.8s, transform 0.8s,border 0.8s,size, 	background-size 0.8s;
 	&:hover &__link{
 		height: 30%;
 
 	}
 	&:hover{
-		// box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 		box-shadow: 12px 8px 10px 5px rgba(0, 0, 0, 0.2);
-		// border:solid 1px rgba(0, 0, 0, 0.4);
-		transform: translateY(-2px);
-		transform: translateX(-1px);
-		transition: 0.5s ease-out;
-		filter: grayscale(0);
+		border:solid 1px rgba(0, 0, 0, 0.4);
+		transform: translate(-2px,-1px); 
+		transition: all 0.5s cubic-bezier;
+		// filter: grayscale(0);
+		background-size:101%;
+	}
+	&__hover{
+		position: absolute;
+		width: calc(100% - 30px);
+		height: calc(100% - 30px);
+		top: 15px;
+		left: 15px;
+		background: rgba(0, 0, 0, 0.8);
+		opacity: 0;
+		transform: scale(0.8);
+		transition: all 0.5s ease-in-out;
+		border-radius: 3px;
 
+	}
+	&:hover .descript{
+		transform: scale(1);
+		opacity: 0.9;
+		transition: all 0.5s ease-in-out;
+
+	}
+	&__effect{
+		position: absolute;
+		width: calc(100% - 30px);
+		height: calc(100% - 30px);
+		top: 15px;
+		left: 15px;
+		opacity:0.9;
+		// opacity:0;
+		border-radius: 0 0 3px 3px ;
+		// padding: 0 20px;
+		// background-color: rgb(179, 56, 56);
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
+		transition: all 1s ;
+
+	}
+	&:hover &__effect{
+		top:100%;
+		transition: all 1s cubic-bezier;
+	}
+	&__stack{
+		display: flex;
+		justify-content: flex-end;
+		position: absolute;
+		bottom:2%;
+		// background: rgba(255, 255, 255, 0.496);
+		width: 94%;
+		margin-left: 3%;
+		height: 20%;
 	}
 	&__link{
 		width: 100%;
@@ -34,15 +81,54 @@
 		bottom: -1px;
 		transition: 0.2s height ease;
 	}
-	&__wrapLink{
-		// background: rgba(255, 255, 255, 0.178);
-		width: 70%;
-		height: 80%;
-		margin-left: 15%;
+}
+
+.iconSprite{
+	// height: 60%;
+	padding: 2px;
+	width: 13%;
+}
+
+
+.descript{
+	color: rgba(255, 255, 255, 0.9);
+	
+	&__block{
+		display: flex;
+		flex-direction: column;
+		// justify-content: space-between;
+		width: 90%;
+		margin: auto;
+		height: 100%;
+		font-size: 0.8em;
+	}
+	&__block span{
 		margin-top: 2%;
+		color: rgb(172, 172, 172)
+
+	}
+	&__text{
+		margin-top: 3%;
+		margin-left: 4%;
+// background: rgb(165, 165, 165);
+		overflow: hidden;
+		max-height: 53%;
+		color: rgba(255, 255, 255, 0.9);
+
+	}
+	&__head{
+		margin-top: 4%;
+		font-weight: lighter;
+	}
+	&__wrapLink{
+		width: 70%;
+		height: 20%;
+		margin: 0 auto 3% auto;
 		display: flex;
 		align-content: center;
 		justify-content: space-around;
+		margin-bottom: 4%;
+		margin-top: auto;
 	}
 	&__hub, &__page{
 		display: block;
@@ -68,11 +154,8 @@
 			background-color: rgba(255, 255, 255, 0.3);
 			border:solid 1px #fff;
 			transition: 0.2s;
-			box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
-			box-shadow:inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
-
+			box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1), inset 0 0 10px 5px rgba(0, 0, 0, 0.1);
 		}
-
 	}
 	&__hub{
 		background-image: url(../img/github.svg);
@@ -82,8 +165,5 @@
 		background-image: url(../img/gitpage.svg);
 
 	}
+
 }
-
-	
-
-
