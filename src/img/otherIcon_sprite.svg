@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+	<symbol id="copy" viewBox="0 0 200 200">
+<g transform="matrix(1.1301979,0,0,1.1301979,-15.243386,-0.03068294)"
+	id="g870">
+	<g id="g3137">
+	 <path
+		style="fill:none;fill-opacity:1;fill-rule:nonzero;
+		stroke-width:10;
+		stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:28.31362543,14.15681271;stroke-dashoffset:45.30180068;stroke-opacity:1;paint-order:markers stroke fill"
+		d="m 77.438055,61.384948 0.233706,-16.867295 c 0.04825,-3.482511 2.803878,-6.286723 6.286722,-6.286723 h 64.426557 c 3.48284,0 6.28672,2.803878 6.28672,6.286723 v 64.426557 c 0,3.48284 -2.80388,6.28672 -6.28672,6.28672 h -20.95716"
+		id="rect849-1" />
+		<rect
+		ry="6.2867222"
+		 y="61.739017"
+		x="49.307632"
+		height="77"
+		width="77"
+		id="rect849"
+		style="fill:none;fill-opacity:1;fill-rule:nonzero;
+		stroke-width:15;
+		stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:fill markers stroke" />
+		</g>
+	</g>
+	</symbol>
+
+</svg>
