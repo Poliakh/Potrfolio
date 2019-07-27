@@ -5,7 +5,7 @@
 		"github":"https://github.com/Poliakh/MyClocks",
 		"preview":"preview/clockx2.jpg",
 		"difficulty":"7",
-		"stack":["sass","gulp","es6","flex"],
+		"stack":["sass","gulp","es6","flex","git","svg"],
 		"descript":"This is a small program with an alarm clock."
 	},
 	"duhoot": {
@@ -14,7 +14,7 @@
 		"github":"https://github.com/Poliakh/Maket-duhoot.git",
 		"preview":"preview/duhootx2.jpg",
 		"difficulty":"7",
-		"stack":["sass","gulp","es6","flex"],
+		"stack":["sass","gulp","es6","flex","git","svg","resp"],
 		"descript":"A description will appear here soon."
 	},
 	"surfase": {
@@ -23,7 +23,7 @@
 		"github":"https://github.com/Poliakh/Maket-surface.git",
 		"preview":"preview/surfasex2.jpg",
 		"difficulty":"6",
-		"stack":["sass","gulp","flex"],
+		"stack":["sass","gulp","flex","git","svg","resp"],
 		"descript":"A description will appear here soon."
 	},
 	"upbusiness": {
@@ -32,7 +32,7 @@
 		"github":"https://github.com/Poliakh/03-Maket.git",
 		"preview":"preview/upbusinessx2.jpg",
 		"difficulty":"5",
-		"stack":["sass","gulp","float"],
+		"stack":["sass","gulp","float","git"],
 		"descript":"A description will appear here soon."
 	},
 	"biseline": {
@@ -41,7 +41,7 @@
 		"github":"https://github.com/Poliakh/maket-02.git",
 		"preview":"preview/biselinex2.jpg",
 		"difficulty":"3",
-		"stack":["sass","gulp","float"],
+		"stack":["sass","gulp","float","git"],
 		"descript":"Simple mockup with lots of elements. Applied float technology."
 	}
 }

@@ -43,22 +43,29 @@ function AjaxSelect(wrapElem,card){
 
 	let createCard = (obj)=>{
 		let newCard = elemCard.cloneNode(true);
-		
 		newCard.hidden = false;
 		newCard.querySelector('.descript__page').href = obj.gitpage;
 		newCard.querySelector('.descript__hub').href = obj.github;
 		newCard.querySelector('.descript__head').innerText = obj.header;
 		newCard.querySelector('.descript__text').innerHTML = obj.descript;
 		newCard.style.backgroundImage = `url("${obj.preview}")`;
-		// createListStack();
 		(function createListStack(){
-			try {
-				let ta = newCard.querySelectorAll('.iconSprite use') ;
-			console.log(ta[0].href.animVal);
-			//img/stack_sprite.svg#resp
-			} catch (error) {
-				console.error('error');
-				
+			let listStack = obj.stack;
+			let listIcon = newCard.querySelectorAll('[data-id-svg]');
+			//Mark the necessary SVG elements in the map tree
+			for (let i = 0; i < listStack.length; i++) {
+				for (let index = 0; index < listIcon.length; index++) {
+					if(listStack[i] == listIcon[index].dataset.idSvg){
+						listIcon[index].dataset.idSvg = 'is';
+					}
+				}
+			}
+			let parent = newCard.querySelector('.card__stack');
+			//Remove unnecessary items
+			for (let index = 0; index < listIcon.length; index++) {
+				if(listIcon[index].dataset.idSvg != 'is'){
+					parent.removeChild(listIcon[index]);
+				}
 			}
 		})()
 
@@ -127,3 +134,31 @@ addDelayAnimation('.cardWrap','.card',0.2,0.5);
 		})
 	}
 })();
+
+//Copy by click
+document.querySelector('body').addEventListener('click', function (event){
+	copyText('.details__icon','.details__cont');
+});
+
+// function copyText (even, '.iconSprite', '.nameId')
+function copyText (clickElem, classTargetCopyText) {
+	let target = event.target.closest(clickElem);
+	if(target && target.matches(clickElem)){
+		let copyText = target.parentElement.querySelector(classTargetCopyText);
+		if (document.selection) {
+			let range = document.createTextRange();
+			range.moveToElementText(copyText);
+			range.select().createTextRange();
+			document.execCommand("copy"); 
+		} else if (window.getSelection) {
+			let range = document.createRange();
+			range.selectNode(copyText);
+			console.log(range.startContainer.innerText);
+			window.getSelection().removeAllRanges(); // clear current selection
+			window.getSelection().addRange(range); // to select text
+			document.execCommand("copy");
+			window.getSelection().removeAllRanges(); // clear current selection
+		}
+	}
+}
+//+38(063)420-60-46
