@@ -1,7 +1,7 @@
 {
 	"myclock": {
 		"header":"MyClock",
-		"gitpage":"https://poliakh.github.io/myportfolio/site/myclocks/",
+		"gitpage":"site/myclocks/",
 		"github":"https://github.com/Poliakh/MyClocks",
 		"preview":"preview/clockx2.jpg",
 		"difficulty":"7",
@@ -10,7 +10,7 @@
 	},
 	"duhoot": {
 		"header":"Duhoot",
-		"gitpage":"https://poliakh.github.io/myportfolio/site/duhoot",
+		"gitpage":"site/duhoot",
 		"github":"https://github.com/Poliakh/Maket-duhoot.git",
 		"preview":"preview/duhootx2.jpg",
 		"difficulty":"7",
@@ -19,7 +19,7 @@
 	},
 	"surfase": {
 		"header":"Surfase",
-		"gitpage":"https://poliakh.github.io/myportfolio/site/surface",
+		"gitpage":"site/surface",
 		"github":"https://github.com/Poliakh/Maket-surface.git",
 		"preview":"preview/surfasex2.jpg",
 		"difficulty":"6",
@@ -28,7 +28,7 @@
 	},
 	"upbusiness": {
 		"header":"UpBusiness",
-		"gitpage":"https://poliakh.github.io/myportfolio/site/upbusiness",
+		"gitpage":"site/upbusiness",
 		"github":"https://github.com/Poliakh/03-Maket.git",
 		"preview":"preview/upbusinessx2.jpg",
 		"difficulty":"5",
@@ -37,7 +37,7 @@
 	},
 	"biseline": {
 		"header":"Bise-Line",
-		"gitpage":"https://poliakh.github.io/myportfolio/site/bislite",
+		"gitpage":"site/bislite",
 		"github":"https://github.com/Poliakh/maket-02.git",
 		"preview":"preview/biselinex2.jpg",
 		"difficulty":"3",
