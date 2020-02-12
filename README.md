@@ -5,7 +5,7 @@
 ## Плaн 
 
 - основное  
-	- добавить [паралакс эффект](https://www.youtube.com/watch?v=neYjdM3D_S8)
+	- добавить [паралакст](https://www.youtube.com/watch?v=neYjdM3D_S8) [или](https://www.youtube.com/watch?v=QEGsNQosAt0&feature=em-uploademail)
 	- ~~добавить  :active  на активные элементы.~~
 - Навигация  
 	- при загрузке мобильноый версии бургер короткое время отображается (некоректно) крестиком  
