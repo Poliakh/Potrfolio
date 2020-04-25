@@ -3,49 +3,55 @@
 
 
 @font-face {
-    font-family: 'myfont';
-    src: url('../fonts/myfont_port/myfont_port-webfont.ttf');
-    src: url('../fonts/myfont_port/myfont_port-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/myfont_port/myfont_port-webfont.woff2') format('woff2'),
-         url('../fonts/myfont_port/myfont_port-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'myfont';
+	src        : url('../fonts/myfont_port/myfont_port-webfont.ttf');
+	src        : url('../fonts/myfont_port/myfont_port-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/myfont_port/myfont_port-webfont.woff2') format('woff2'),
+		url('../fonts/myfont_port/myfont_port-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style : normal;
 
 }
 
-.my{
-	font-family: "myfont";
-	font-size: 60px;
-	display: inline-block;
-	font-style: normal;
-	color: $basic;
-	text-rendering:auto;
-	-webkit-font-smoothing:antialiased;
-	-moz-osx-font-smoothing:grayscale;
-	transition: 0.3s ease-in;
+.my {
+	font-family            : "myfont";
+	font-size              : 60px;
+	display                : inline-block;
+	font-style             : normal;
+	color                  : $basic;
+	text-rendering         : auto;
+	-webkit-font-smoothing : antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transition             : 0.3s ease-in;
 
 }
-.skype::before{
+
+.skype::before {
 	content: 's';
 
 }
-.google::before{
+
+.google::before {
 	content: 'g';
 
 }
-.viber::before{
+
+.viber::before {
 	content: 'v';
 
 }
-.facebook::before{
+
+.facebook::before {
 	content: 'f';
 
 }
-.telegram::before{
+
+.telegram::before {
 	content: 't';
 
 }
-.in::before{
+
+.in::before {
 	content: 'l';
 
 }

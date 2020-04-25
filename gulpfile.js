@@ -2,7 +2,6 @@ let gulp			= require ('gulp'),
 	sass			= require('gulp-sass'),
 	sourcemaps		= require('gulp-sourcemaps'),
 	autoprefixer	= require('gulp-autoprefixer'),
-	// gulpImport		= require('gulp-html-import'),
 	rigger			= require('gulp-rigger'),
 	htmlMin			= require('gulp-htmlmin'),
 	browserSync		= require('browser-sync'),		//виртуальный браузер
@@ -145,6 +144,7 @@ gulp.task('script', ()=>{
 	gulp.src(path.src.js + '/script.js')
 		.pipe(sourcemaps.init())
 		.pipe(plumber())
+		.pipe(rigger())
 		// .pipe(concat('script.js'))
 		// .pipe(babel({
 		// 	presets: [['@babel/env', {
