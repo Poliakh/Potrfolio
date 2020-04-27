@@ -115,6 +115,7 @@
 	// transition: background-color 0.15s;
 	transition: 0.15s text-shadow, 0.3s background-color, 0.5s box-shadow, border 1.5s ;
 	outline: none;
+	cursor: pointer;
 
 	&:hover, &:focus{
 		background-color:  #444 * 0.8;

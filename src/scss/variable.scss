@@ -1,6 +1,6 @@
 $basic:#4a4a4a;
 $bgcFoot:#222;
-$bg:#FFFFFF;
+$bg:rgb(255, 255, 255);
 $logo:#ff7d42;
 $collight:#fff;
 $dee_xxs:320px;
@@ -9,5 +9,5 @@ $dee_s:670px;
 $dee_m:815px;
 $dee_l:1024px;
 $dee_xl:1200px;
-
-$burgerAnimate:0.5s;
+$burgerAnimate:0.3s;
+$burgerAnimateCurv:cubic-bezier(0.15, 0, 0.17, 1);

@@ -116,7 +116,7 @@ gulp.task('sass', ()=>{
 					} )
 				))
 		.pipe(autoprefixer(
-			['last 3 version', '> 1%', 'ie 8', 'ie 7'],
+			['last 3 version'],
 			{cascade: true}))
 			// .pipe(cssnano())
 		.pipe(gulpif(argv.prod, cleanCSS({debug: true}, (details) => {
