@@ -1,4 +1,4 @@
-const burger = () => {
+export default () => {
 	const wrapMenuNavigation = document.querySelector('.navbar');
 	document.querySelector('body').addEventListener('click', toggleMenu);
 
@@ -23,4 +23,3 @@ const burger = () => {
 	}
 })(); 
 
-burger();

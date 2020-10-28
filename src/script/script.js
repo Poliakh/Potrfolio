@@ -1,9 +1,13 @@
 "use strict";
+import burger from './modules/burger'
+import CardListCreator from './modules/card-list-creator'
+import copyByClick from './modules/copy-by-click'
+import createLinkToGoogleSheet from './modules/create-link-googlesheet'
 
-//= modules/burger.js
-//= modules/card-list-creator.js
-//= modules/copy-by-click.js
 //= modules/create-link-googlesheet.js
+burger();
+copyByClick();
+createLinkToGoogleSheet();
 
 const createList = new CardListCreator('.cardWrap', '.card')
 createList.load('https://docs.google.com/spreadsheets/d/1ki0LZ0At_vauhtubYrQP64AvXBv7Li-qcHzFz9wR0fs/edit?usp=sharing')

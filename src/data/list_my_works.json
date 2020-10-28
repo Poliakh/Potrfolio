@@ -1,0 +1,123 @@
+{
+	"ink": {
+			"display":"false",
+			"header":"Cloud",
+			"gitpage":"http://clouds.polyah.zzz.com.ua",
+			"github":"private",
+			"preview":"--",
+			"difficulty":"8",
+			"stack":["es6","flex","svg","resp"],
+			"descript":"Specproject for ink. </br>- </br>-"
+	},
+	"gorelova": {
+			"display":"false",
+			"header":"Gorelova",
+			"gitpage":"http://gorelova.polyah.zzz.com.ua",
+			"github":"private",
+			"preview":"--",
+			"difficulty":"7",
+			"stack":["es6","flex","svg","resp"],
+			"descript":"Site for Olga Gorelova- </br>- </br>-"
+	},
+	"okclinic": {
+			"display":"false",
+			"header":"Medical institution",
+			"gitpage":"https://okclinic.net.ua",
+			"github":"private",
+			"preview":"http://portfolio.polyah.zzz.com.ua/preview/okclinik.jpg",
+			"difficulty":"7",
+			"stack":["es6","flex","svg","resp"],
+			"descript":"Project for one medical institution. </br>- </br>-"
+	},
+	"todoList": {
+			"display": true,
+			"header": "The test assignment",
+			"gitpage": "http://portfolio.polyah.zzz.com.ua/site/todo-list",
+			"github": "https://github.com/Poliakh/todolist-vanilla-js",
+			"preview": "http://portfolio.polyah.zzz.com.ua/preview/todoList.jpg",
+			"difficulty": "7",
+			"stack": ["es6"],
+			"descript": "Test job from one company. </br> - </br>-"
+	},
+	"floaat": {
+			"display": true,
+			"header": "The test assignment",
+			"gitpage": "https://poliakh.github.io/myportfolio/site/floaat",
+			"github": "https://github.com/Poliakh/floaat",
+			"preview": "https://i.imgur.com/nczLJpu.png",
+			"difficulty": "9",
+			"stack": ["gulp", "es6", "flex", "git", "svg"],
+			"descript": "This work is not finished, but it will be ready soon </br> - </br>-"
+	},
+	"itcreative": {
+			"display": true,
+			"header": "One test task",
+			"gitpage": "https://poliakh.github.io/myportfolio/site/itcreative_test",
+			"github": "https://github.com/Poliakh/ITcreative_test",
+			"preview": "preview/itcreative.jpg",
+			"difficulty": "8",
+			"stack": ["gulp", "es6", "flex", "git", "svg", "resp"],
+			"descript": "Test job from one company. </br> - </br>-"
+	},
+	"nvmed": {
+			"display": true,
+			"header": "NovaMed",
+			"gitpage": "https://poliakh.github.io/myportfolio/site/nvmed/",
+			"github": "https://github.com/Poliakh/NvMed",
+			"preview": "preview/nvmed.jpg",
+			"difficulty": "7",
+			"stack": ["gulp", "es6", "flex", "svg", "resp", "sass"],
+			"descript": "Для этого сайта старался не использовать сторонние библиотеки, весь функционал создавал самостотяльно. Прайсы берут данные с гугл таблицы."
+	},
+	"myclock": {
+			"display": false,
+			"header": "MyClock",
+			"gitpage": "https://poliakh.github.io/myportfolio/site/myclocks/",
+			"github": "https://github.com/Poliakh/MyClocks",
+			"preview": "preview/clockx2.jpg",
+			"difficulty": "7",
+			"stack": ["sass", "gulp", "es6", "flex", "git", "svg"],
+			"descript": "This is a small program with an alarm clock."
+	},
+
+	"duhoot": {
+			"display": true,
+			"header": "Duhoot",
+			"gitpage": "https://poliakh.github.io/myportfolio/site/duhoot",
+			"github": "https://github.com/Poliakh/Maket-duhoot.git",
+			"preview": "preview/duhootx2.jpg",
+			"difficulty": "7",
+			"stack": ["sass", "gulp", "es6", "flex", "git", "svg", "resp"],
+			"descript": "A description will appear here soon."
+	},
+	"surfase": {
+			"display": true,
+			"header": "Surfase",
+			"gitpage": "https://poliakh.github.io/myportfolio/site/surface",
+			"github": "https://github.com/Poliakh/Maket-surface.git",
+			"preview": "preview/surfasex2.jpg",
+			"difficulty": "6",
+			"stack": ["sass", "gulp", "flex", "git", "svg", "resp"],
+			"descript": "A description will appear here soon."
+	},
+	"upbusiness": {
+			"display": true,
+			"header": "UpBusiness",
+			"gitpage": "https://poliakh.github.io/myportfolio/site/upbusiness",
+			"github": "https://github.com/Poliakh/03-Maket.git",
+			"preview": "preview/upbusinessx2.jpg",
+			"difficulty": "5",
+			"stack": ["sass", "gulp", "float", "git"],
+			"descript": "A description will appear here soon."
+	},
+	"biseline": {
+			"display": true,
+			"header": "Bise-Line",
+			"gitpage": "https://poliakh.github.io/myportfolio/site/bislite",
+			"github": "https://github.com/Poliakh/maket-02.git",
+			"preview": "preview/biselinex2.jpg",
+			"difficulty": "3",
+			"stack": ["sass", "gulp", "float", "git"],
+			"descript": "Simple mockup with lots of elements. Applied float technology."
+	}
+}

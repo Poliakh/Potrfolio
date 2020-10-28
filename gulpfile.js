@@ -302,14 +302,18 @@ function clean_prod() {
 	return del(path.clean_prod);
 };
 function otherProd() {
-	return src(path.build.fonts + "/**/*.*")
-		.pipe(dest(path.prod.fonts))
-		.pipe(src(path.build.img + "/**/*.*"))
-		.pipe(dest(path.prod.img));
+	return src(source_folder + "/data/**/*.*")
+		.pipe(dest(production_folder + "/data"))
+
+}
+function otherBuild() {
+	return src(source_folder + "/data/**/*.*")
+		.pipe(dest(project_folder + "/data"))
+
 
 }
 
-const build = gulp.series(clean, gulp.parallel(bundle, style, html, images, fonts));
+const build = gulp.series(clean, gulp.parallel(bundle, style, html, images, fonts,otherBuild));
 
 const build_prod = gulp.series(flagProd, clean_prod, gulp.parallel(bundle, style, html, images, fonts), otherProd);
 

@@ -1,4 +1,4 @@
-class CardListCreator {
+export default class CardListCreator {
 	constructor(wrapElem, card){
 		this.card = card;
 		this.myCards = document.createDocumentFragment();

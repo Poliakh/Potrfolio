@@ -1,4 +1,4 @@
-const createLinkToGoogleSheet = (shareLink = '', listNumber = 1) => {
+export default (shareLink = '', listNumber = 1) => {
 	const idRegex = /\/d\/(.*)\//;
 	try {
 		const idSheet = shareLink.match(idRegex)[1];
