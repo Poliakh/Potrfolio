@@ -45,21 +45,16 @@
 
 	}
 	&__effect{
-	// 	height: 33%;
-    // /* top: 61px; */
-    // bottom: 15px;
-    // left: 15px;
 		position: absolute;
-		width: calc(100% - 30px);
+		// width: calc(100% - 30px);
+		width: 100%;
 		height: 35%;
-		// height: calc(100% - 30px);
-		bottom: 15px;
-		left: 15px;
+		// bottom: 15px;
+		// left: 15px;
+		bottom: 0;
+		left: 0;
 		opacity:0.9;
-		// opacity:0;
 		border-radius: 0 0 3px 3px ;
-		// padding: 0 20px;
-		// background-color: rgb(179, 56, 56);
 		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.8) 100%);
 		transition: all 1s ;
 

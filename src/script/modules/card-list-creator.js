@@ -4,8 +4,6 @@ export default class CardListCreator {
 		this.myCards = document.createDocumentFragment();
 		this.parentCards = document.querySelector(wrapElem);
 		this.elemCard = this.parentCards.querySelector(card);
-		console.log('creator');
-		
 	};
 
 	_showLoading = (state = true) => {
@@ -60,8 +58,7 @@ export default class CardListCreator {
 
 	_getObject = async (response) => {
 		if (response.ok) {
-			const data = (await response.json()).feed.entry[0].gsx$myjson.$t;
-			return JSON.parse(data);
+			return await response.json();
 		} else {
 			showLoading(false);
 			const error = new Error("Ошибка " + response.statusText);
@@ -88,7 +85,8 @@ export default class CardListCreator {
 			this.parentCards.removeChild(this.parentCards.querySelector(this.card));
 		};
 
-		const link = this.createLinkToGoogleSheet(url);
+		// const link = this.createLinkToGoogleSheet(url);
+		const link = url;
 			try {
 				fetch(link)
 				.then((data) => {
@@ -96,7 +94,6 @@ export default class CardListCreator {
 				})
 				.then((obj) => {
 					this._parseJSON(obj);
-					console.log('obj: ', obj);
 					addDelayAnimation('.cardWrap', '.card', 0.2, 0.5);
 				})
 				

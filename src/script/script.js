@@ -10,7 +10,8 @@ copyByClick();
 createLinkToGoogleSheet();
 
 const createList = new CardListCreator('.cardWrap', '.card')
-createList.load('https://docs.google.com/spreadsheets/d/1ki0LZ0At_vauhtubYrQP64AvXBv7Li-qcHzFz9wR0fs/edit?usp=sharing')
+// createList.load('https://docs.google.com/spreadsheets/d/1ki0LZ0At_vauhtubYrQP64AvXBv7Li-qcHzFz9wR0fs/edit?usp=sharing')
+createList.load('./data/list_my_works.json')
 
 new WOW().init();
 

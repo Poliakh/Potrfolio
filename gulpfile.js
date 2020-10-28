@@ -302,21 +302,21 @@ function clean_prod() {
 	return del(path.clean_prod);
 };
 function otherProd() {
-	return src(source_folder + "/data/**/*.*")
-		.pipe(dest(production_folder + "/data"))
+			src(source_folder + "/data/**/*.*")
+			.pipe(dest(production_folder + "/data"))
+	return	src(source_folder + "/preview/**/*.*")
+			.pipe(dest(production_folder + "/preview"))
 
 }
 function otherBuild() {
-	return src(source_folder + "/data/**/*.*")
-		.pipe(dest(project_folder + "/data"))
-
-
+			src(source_folder + "/data/**/*.*")
+			.pipe(dest(project_folder + "/data"))
+	return	src(source_folder + "/preview/**/*.*")
+			.pipe(dest(project_folder + "/preview"))
 }
 
-const build = gulp.series(clean, gulp.parallel(bundle, style, html, images, fonts,otherBuild));
-
+const build = gulp.series(clean, gulp.parallel(bundle, style, html, images, fonts, otherBuild));
 const build_prod = gulp.series(flagProd, clean_prod, gulp.parallel(bundle, style, html, images, fonts), otherProd);
-
 const watch = gulp.series(build, gulp.parallel(watchFile, browserSync));
 
 exports.fonts = fonts;
