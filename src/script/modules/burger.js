@@ -10,16 +10,17 @@ export default () => {
 			wrapMenuNavigation.classList.remove('navbar-active');
 		}
 	}
+
+	//turn off animated navigation for items menu  if burger visible
+	(function () {
+		const burger = document.querySelector(".burger")
+		if (!burger) return
+		if (getComputedStyle(burger).visibility == 'visible') {
+			const navItemList = document.querySelectorAll(".menu .wow");
+			navItemList.forEach(elem => {
+				elem.classList.remove('wow');
+			})
+		}
+	})();
+
 }
-
-//turn off animated navigation for items menu  if burger visible
-(function () {
-	const burger = document.querySelector(".burger")
-	if (getComputedStyle(burger).visibility == 'visible') {
-		const navItemList = document.querySelectorAll(".menu .wow");
-		navItemList.forEach(elem => {
-			elem.classList.remove('wow');
-		})
-	}
-})(); 
-

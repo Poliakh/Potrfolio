@@ -12,11 +12,17 @@
 	margin-right: auto;
 	margin-left: auto;
 	display: flex;
-	justify-content:
-	space-between;
+	justify-content:space-between;
 	align-self: flex-start;
 	flex-wrap: wrap;
 	transition: 0.8s all ease;
+	&-sr{
+		justify-content: center;
+	}
+}
+.contact__item{
+	margin-right: 25px;
+	margin-left: 25px;
 }
 .iconCont{
 	width: 50px;

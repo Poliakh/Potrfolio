@@ -93,6 +93,9 @@ async function flagProd() {
 const mode = () => {
 	return (flags.prod) ? "production" : "development";
 };
+const modeMap = () => {
+	return (flags.prod) ?  "none": "source-map";
+};
 
 function browserSync() {
 	browsersync.init({
@@ -177,7 +180,7 @@ const bundle = (done) => {
 				filename: 'main.min.js'
 			},
 			watch: false,
-			devtool: "source-map",
+			devtool: modeMap(),
 			module: {
 				rules: [
 					{
@@ -248,10 +251,12 @@ function images() {
 		// 		// optimizationLevel: 5 //от 0 до 7
 		// 	})
 		// )
-		.pipe(dest(path.build.img))
+		.pipe(gulpif(!flags.prod,dest(path.build.img)))
+		.pipe(gulpif(flags.prod, dest(path.prod.img)))
 	return src(path.src.sprite)
-		.pipe(dest(path.build.img))
-		.pipe(browsersync.stream())
+		.pipe(gulpif(!flags.prod,dest(path.build.img)))
+		.pipe(gulpif(flags.prod, dest(path.prod.img)))
+	.pipe(browsersync.stream())
 
 }
 

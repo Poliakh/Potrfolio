@@ -43,10 +43,11 @@
   },
   "dependencies": {
     "babel-loader": "^8.1.0",
-    "css-vars-ponyfill": "^2.3.2",
     "core-js": "^3.6.5",
+    "css-vars-ponyfill": "^2.3.2",
     "python": "0.0.4",
     "svgxuse": "^1.2.6",
-    "webpack-stream": "^5.2.1"
+    "webpack-stream": "^5.2.1",
+    "wow.js": "^1.2.2"
   }
 }

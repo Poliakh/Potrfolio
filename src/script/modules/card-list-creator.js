@@ -1,3 +1,5 @@
+import {addDelayAnimation} from './addDelayAnimation'
+
 export default class CardListCreator {
 	constructor(wrapElem, card){
 		this.card = card;

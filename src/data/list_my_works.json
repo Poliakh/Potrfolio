@@ -10,7 +10,7 @@
 			"descript":"Specproject for ink. </br>- </br>-"
 	},
 	"gorelova": {
-			"display":false,
+			"display":true,
 			"header":"Gorelova",
 			"gitpage":"http://gorelova.polyah.zzz.com.ua",
 			"github":"private",
@@ -42,7 +42,7 @@
 	"floaat": {
 			"display": true,
 			"header": "The test assignment",
-			"gitpage": "https://poliakh.github.io/myportfolio/site/floaat",
+			"gitpage": "http://portfolio.polyah.zzz.com.ua/site/floaat",
 			"github": "https://github.com/Poliakh/floaat",
 			"preview": "./preview/float.png",
 			"difficulty": "9",
@@ -52,7 +52,7 @@
 	"itcreative": {
 			"display": true,
 			"header": "One test task",
-			"gitpage": "https://poliakh.github.io/myportfolio/site/itcreative_test",
+			"gitpage": "http://portfolio.polyah.zzz.com.ua/site/itcreative_test",
 			"github": "https://github.com/Poliakh/ITcreative_test",
 			"preview": "./preview/itcreative.jpg",
 			"difficulty": "8",
@@ -62,28 +62,17 @@
 	"nvmed": {
 			"display": true,
 			"header": "NovaMed",
-			"gitpage": "https://poliakh.github.io/myportfolio/site/nvmed/",
+			"gitpage": "http://portfolio.polyah.zzz.com.ua/site/nvmed/",
 			"github": "https://github.com/Poliakh/NvMed",
 			"preview": "./preview/nvmed.jpg",
 			"difficulty": "7",
 			"stack": ["gulp", "es6", "flex", "svg", "resp", "sass"],
 			"descript": "Для этого сайта старался не использовать сторонние библиотеки, весь функционал создавал самостотяльно. Прайсы берут данные с гугл таблицы."
 	},
-	"myclock": {
-			"display": false,
-			"header": "MyClock",
-			"gitpage": "https://poliakh.github.io/myportfolio/site/myclocks/",
-			"github": "https://github.com/Poliakh/MyClocks",
-			"preview": "./preview/clockx2.jpg",
-			"difficulty": "7",
-			"stack": ["sass", "gulp", "es6", "flex", "git", "svg"],
-			"descript": "This is a small program with an alarm clock."
-	},
-
 	"duhoot": {
 			"display": true,
 			"header": "Duhoot",
-			"gitpage": "https://poliakh.github.io/myportfolio/site/duhoot",
+			"gitpage": "http://portfolio.polyah.zzz.com.ua/site/duhoot",
 			"github": "https://github.com/Poliakh/Maket-duhoot.git",
 			"preview": "./preview/duhootx2.jpg",
 			"difficulty": "7",
@@ -93,7 +82,7 @@
 	"surfase": {
 			"display": true,
 			"header": "Surfase",
-			"gitpage": "https://poliakh.github.io/myportfolio/site/surface",
+			"gitpage": "http://portfolio.polyah.zzz.com.ua/site/surface",
 			"github": "https://github.com/Poliakh/Maket-surface.git",
 			"preview": "./preview/surfasex2.jpg",
 			"difficulty": "6",
@@ -103,7 +92,7 @@
 	"upbusiness": {
 			"display": true,
 			"header": "UpBusiness",
-			"gitpage": "https://poliakh.github.io/myportfolio/site/upbusiness",
+			"gitpage": "http://portfolio.polyah.zzz.com.ua/site/upbusiness",
 			"github": "https://github.com/Poliakh/03-Maket.git",
 			"preview": "./preview/upbusinessx2.jpg",
 			"difficulty": "5",
@@ -113,7 +102,7 @@
 	"biseline": {
 			"display": true,
 			"header": "Bise-Line",
-			"gitpage": "https://poliakh.github.io/myportfolio/site/bislite",
+			"gitpage": "http://portfolio.polyah.zzz.com.ua/site/bislite",
 			"github": "https://github.com/Poliakh/maket-02.git",
 			"preview": "./preview/biselinex2.jpg",
 			"difficulty": "3",
